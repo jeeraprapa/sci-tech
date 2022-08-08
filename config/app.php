@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        SciTech\Admin\Providers\AdminServiceProvider::class,
 
         /*
          * Application Service Providers...
