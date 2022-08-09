@@ -1,3 +1,4 @@
+@import "main";
 @import "blog";
 @import url(https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap);
 
@@ -8,6 +9,7 @@ body{
 .bg-white {
     background-color: #ffffff;
 }
+
 header nav{
     box-shadow: 0px 4px 14px rgba(9, 56, 25, 0.07);
 }

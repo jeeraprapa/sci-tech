@@ -1,0 +1,47 @@
+<?php
+
+namespace SciTech\Admin\Http\Requests\Admin;
+
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+
+class StoreRoleRequest extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize()
+    {
+        return true;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array<string, mixed>
+     */
+    public function rules()
+    {
+        return [
+            'name' => ['required', 'max:255', Rule::unique('roles')->ignore($this->id)],
+            'permission' => 'required',
+        ];
+    }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'name.required' => 'ชื่อห้ามว่าง',
+            'name.max' => 'ชื่อต้องมีความยาวตัวอักษรไม่เกิน 255 ตัวอักษร',
+            'name.unique' => 'ชื่อนี้ไม่สามารถใช้ได้',
+            'permission.required' => 'สิทธิ์ห้ามว่าง'
+        ];
+    }
+}
