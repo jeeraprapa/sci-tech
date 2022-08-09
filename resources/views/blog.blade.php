@@ -37,7 +37,7 @@
                 <div class="container-fluid">
                     <div class="row align-items-start p-5">
                         <div class="col-12 col-lg-3 p-4">
-                            <div class="card">
+                            <div class="card" data-bs-toggle="modal" data-bs-target="#modal-blog">
                                 <div class="card-image">
                                     <img src="{{asset('images/blog1.png')}}" alt="" class="w-100">
                                 </div>
@@ -111,10 +111,37 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modal-blog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                    <div class="modal-content rounded-sm rounded-3">
+                        <div class="modal-body px-0">
+                            <div class="titletext px-3">
+                                <h5 class="modal-title" id="exampleModalLabel">บริการวิชาการแก่สังคม โครงการพัฒนา คุณภาพชีวิตผู้สูงอายุ</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="date px-3 py-3">12/02/2564</div>
+
+                            <div class="modal-image-content">
+                                <img src="{{asset('images/detail-blog1.png')}}" alt="" class="w-100">
+                            </div>
+
+                            <div class="modal-text">
+                                โครงการบริการวิชาการแก่สังคม ระดับมหาวิทยาลัย พื้นที่เทศบาลตำบลท่าศาลา สำนักวิจัยและบริการวิชาการและคณะวิชา มหาวิทยาลัยพายัพ ร่วมกับเทศบาลตำบลท่าศาลา ดำเนินโครงการบริการวิชาการ ระดับมหาวิทยาลัย ปีการศึกษา 2563 ภายใต้ “โครงการพัฒนาคุณภาพชีวิตผู้สูงอายุ พื้นที่เทศบาลตำบลท่าศาลา อำเภอเมือง จังหวัดเชียงใหม่” โดยมีกลุ่มเป้าหมาย : โรงเรียนเกษียณวัย โดยดำเนินกิจกรรม ในวันที่ 5 กุมภาพันธ์ 2564 เรื่อง “การทำดอกไม้จากผ้าใยบัว เพื่อสร้างรายได้เสริม” วิทยากรและทีมงานจากคณะบริหารธุรกิจและวิทยาศาสตร์ โครงการบริการวิชาการแก่สังคม ระดับมหาวิทยาลัย พื้นที่เทศบาลตำบลท่าศาลา สำนักวิจัยและบริการวิชาการและคณะวิชา มหาวิทยาลัยพายัพ ร่วมกับเทศบาลตำบลท่าศาลา ดำเนินโครงการบริการวิชาการ ระดับมหาวิทยาลัย ปีการศึกษา 2563 ภายใต้
+                                โครงการบริการวิชาการแก่สังคม ระดับมหาวิทยาลัย พื้นที่เทศบาลตำบลท่าศาลา สำนักวิจัยและบริการวิชาการและคณะวิชา มหาวิทยาลัยพายัพ ร่วมกับเทศบาลตำบลท่าศาลา ดำเนินโครงการบริการวิชาการ ระดับมหาวิทยาลัย ปีการศึกษา 2563 ภายใต้ “โครงการพัฒนาคุณภาพชีวิตผู้สูงอายุ พื้นที่เทศบาลตำบลท่าศาลา อำเภอเมือง จังหวัดเชียงใหม่” โดยมีกลุ่มเป้าหมาย : โรงเรียนเกษียณวัย โดยดำเนินกิจกรรม ในวันที่ 5 กุมภาพันธ์ 2564 เรื่อง “การทำดอกไม้จากผ้าใยบัว เพื่อสร้างรายได้เสริม” วิทยากรและทีมงานจากคณะบริหารธุรกิจและวิทยาศาสตร์
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </main>
 
     </div>
 </body>
+
 <script src="{{asset('vendors/js/bootstrap.bundle.min.js')}}"></script>
+
 
 </html>
