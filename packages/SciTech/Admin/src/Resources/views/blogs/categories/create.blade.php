@@ -13,8 +13,7 @@
                 </div>
                 <div class="card-body p-3">
                     {!! Form::open(['route' => 'admin.blog.category.store', 'autocomplete' => 'off', 'id' => 'admin-form']) !!}
-                    @include('admin::blogs.categories.partials.general')
-                    {{ Form::submit('บันทึก', ['class' => 'btn btn-primary']) }}
+                        @include('admin::blogs.categories.partials.general')
                     {!! Form::close() !!}
                 </div>
             </div>

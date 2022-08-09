@@ -29,4 +29,19 @@ class UpdateRoleRequest extends FormRequest
             'permission' => 'required',
         ];
     }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'name.required' => 'ชื่อห้ามว่าง',
+            'name.max' => 'ชื่อต้องมีความยาวตัวอักษรไม่เกิน 255 ตัวอักษร',
+            'name.unique' => 'ชื่อนี้ไม่สามารถใช้ได้',
+            'permission.required' => 'สิทธิ์ห้ามว่าง'
+        ];
+    }
 }

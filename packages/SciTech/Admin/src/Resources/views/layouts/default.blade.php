@@ -7,12 +7,16 @@
         @yield('page_title')
     </title>
 
+    @livewireStyles
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/summernote/summernote.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/dropzone/dropzone.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/flatpickr/dist/flatpickr.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/admin/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/admin/css/adminlte.css') }}">
+    @stack('css')
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <!-- Site wrapper -->
@@ -46,8 +50,8 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="{{ route('admin.dashboard.index') }}" class="brand-link">
-            <img src="{{ asset('vendor/admin/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">Admin Sci Tech</span>
+            <img src="{{ asset('vendor/admin/img/logo.png') }}" alt="Scitech Logo" class="brand-image">
+            <span class="brand-text font-weight-light">Scitech</span>
         </a>
 
         <!-- Sidebar -->
@@ -71,7 +75,7 @@
         <div class="float-right d-none d-sm-block">
             <b>Version</b> 1.0.0
         </div>
-        <strong>Copyright &copy; 2022 Sci Tech.</strong> All rights reserved.
+        <strong>Copyright &copy; 2022 Scitech.</strong> All rights reserved.
     </footer>
 
     <!-- Control Sidebar -->
@@ -86,6 +90,7 @@
 <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
 <script src="{{ asset('vendor/summernote/summernote.min.js') }}"></script>
+<script src="{{ asset('vendor/dropzone/dropzone.min.js') }}"></script>
 <script src="{{ asset('vendor/flatpickr/dist/flatpickr.min.js') }}"></script>
 <script src="{{ asset('vendor/admin/js/adminlte.min.js') }}"></script>
 
@@ -111,6 +116,7 @@
     });
 </script>
 
+@livewireScripts
 @stack('scripts')
 
 </body>

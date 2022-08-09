@@ -1,7 +1,7 @@
 @extends('admin::layouts.default')
 
 @section('page_title')
-    {{ __('admin::app.admin.title') }}
+    ประเภทบล็อก
 @stop
 
 @section('content')

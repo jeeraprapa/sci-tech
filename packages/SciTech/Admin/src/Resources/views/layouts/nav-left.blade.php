@@ -17,7 +17,7 @@
                         @foreach ($menuItem['children'] as $menuChildrenItem)
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{ $menuChildrenItem['url'] }}" class="nav-link {{ $menu->getActive($menuChildrenItem) }}">
+                                    <a href="{{ $menuChildrenItem['url'] }}" class="nav-link">
                                         <i class="nav-icon {{ $menuChildrenItem['icon-class'] }}"></i>
                                         <p>
                                             {{ $menuChildrenItem['name'] }}

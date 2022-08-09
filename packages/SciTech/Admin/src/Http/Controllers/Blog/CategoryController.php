@@ -8,6 +8,7 @@ use SciTech\Admin\Http\Requests\Blog\StoreBlogCategoryRequest;
 use SciTech\Admin\Http\Requests\Blog\UpdateBlogCategoryRequest;
 use SciTech\Admin\Models\Blog;
 use SciTech\Admin\Models\BlogCategory;
+use SciTech\Admin\Service\Editor;
 
 class CategoryController extends Controller
 {
@@ -25,7 +26,12 @@ class CategoryController extends Controller
 
     public function store(StoreBlogCategoryRequest $request)
     {
-        BlogCategory::create($request->all());
+        $data = $request->all();
+
+        $editor = new Editor();
+        $data['description'] = $editor->uploadImage($data['description']);
+
+        BlogCategory::create($data);
 
         $request->session()->flash('status', 'success');
         $request->session()->flash('message', 'ดำเนินการสำเร็จ');
@@ -41,8 +47,14 @@ class CategoryController extends Controller
 
     public function update(UpdateBlogCategoryRequest $request, $id)
     {
+        $data = $request->all();
+
         $category = BlogCategory::findOrFail($id);
-        $category->fill($request->all())->saveOrFail();
+
+        $editor = new Editor();
+        $data['description'] = $editor->uploadImage($data['description']);
+
+        $category->fill($data)->saveOrFail();
 
         $request->session()->flash('status', 'success');
         $request->session()->flash('message', 'ดำเนินการสำเร็จ');
@@ -51,14 +63,14 @@ class CategoryController extends Controller
 
     public function destroy(Request $request, $id)
     {
-        $blogs = Blog::where('category_id', $id)->all();
+        $blogs = Blog::where('category_id', $id)->get();
         if (!$blogs->isEmpty()) {
             $request->session()->flash('status', 'danger');
             $request->session()->flash('message', 'ไม่สามารถลบประเภทบล็อกนี้ได้เนื่องจากถูกใช้งานไปแล้ว');
             return redirect()->route('admin.blog.category.index');
         }
 
-        $category = BlogCategory::finaOrFail($id);
+        $category = BlogCategory::findOrFail($id);
         $category->delete();
 
         $request->session()->flash('status', 'success');

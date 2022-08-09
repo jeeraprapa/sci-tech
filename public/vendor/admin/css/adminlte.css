@@ -34969,6 +34969,12 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   color: #495057;
 }
 
+.login-logo .logo-image {
+    width: 112px;
+    height: 165px;
+    display: block;
+}
+
 .login-page,
 .register-page {
   -ms-flex-align: center;
@@ -53008,5 +53014,77 @@ a.text-muted:hover {
 
 .dark-mode .border-dark {
   border-color: #4b545c !important;
+}
+
+.dropzone {
+    min-height: 210px;
+    padding: 4rem;
+    border: 2px dashed #e4e4e4;
+    margin-bottom: 2rem;
+}
+
+.dropzone .dz-message {
+    text-align: center;
+    margin: 2em 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dropzone .dz-message .note {
+    font-size: 14px;
+    font-weight: normal;
+    display: block;
+    margin-top: 1.4rem;
+}
+
+#upload-template {
+    display: none;
+}
+
+.upload-component .upload-preview {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.upload-component .overflow-lists {
+    max-height: 480px;
+    overflow-y: auto;
+}
+
+.dz-preview {
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #e4e4e4;
+    padding: 8px;
+    display: flex;
+}
+
+.dz-size{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin: 0 50px;
+}
+
+.dz-action{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.dz-action > a {
+    display: inline-block;
+    margin: 0 6px;
+    border-bottom: 1px dashed;
+}
+
+.dz-action a.dz-remove {
+    color: #ea8282;
+    border-color: #ea8282;
+}
+
+.dz-action a.dz-preview-link {
+    color: #5A738E;
+    border-color: #5A738E;
 }
 /*# sourceMappingURL=adminlte.css.map */

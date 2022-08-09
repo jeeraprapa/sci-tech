@@ -14,7 +14,6 @@
                 <div class="card-body p-3">
                     {!! Form::open(['route' => 'admin.staff.store', 'autocomplete' => 'off', 'id' => 'admin-form']) !!}
                         @include('admin::admins.partials.general')
-                        {{ Form::submit('บันทึก', ['class' => 'btn btn-primary']) }}
                     {!! Form::close() !!}
                 </div>
             </div>

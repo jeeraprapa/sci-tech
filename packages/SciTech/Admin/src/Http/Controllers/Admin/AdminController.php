@@ -36,7 +36,7 @@ class AdminController extends Controller
 
         $request->session()->flash('status', 'success');
         $request->session()->flash('message', 'ดำเนินการสำเร็จ');
-        return redirect()->route('admin.index');
+        return redirect()->route('admin.staff.index');
     }
 
     public function edit($id)
@@ -55,13 +55,19 @@ class AdminController extends Controller
 
     public function update(UpdateAdminRequest $request, $id)
     {
+        $data = $request->all();
+        if(empty($data['password'])){
+            unset($data['password']);
+            unset($data['password_confirmation']);
+        }
+
         $admin = Admin::findOrFail($id);
-        $admin->fill($request->all())->saveOrFail();
+        $admin->fill($data)->saveOrFail();
         $admin->syncRoles([$request->get('role_id')]);
 
         $request->session()->flash('status', 'success');
         $request->session()->flash('message', 'ดำเนินการสำเร็จ');
-        return redirect()->route('admin.index');
+        return redirect()->route('admin.staff.index');
     }
 
     public function destroy(Request $request, $id)
@@ -71,6 +77,6 @@ class AdminController extends Controller
 
         $request->session()->flash('status', 'success');
         $request->session()->flash('message', 'ดำเนินการสำเร็จ');
-        return redirect()->route('admin.index');
+        return redirect()->route('admin.staff.index');
     }
 }
