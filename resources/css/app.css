@@ -11,15 +11,3 @@ body{
 header nav{
     box-shadow: 0px 4px 14px rgba(9, 56, 25, 0.07);
 }
-
-#blog {
-    background-size: 100%;
-    background-image: url("/images/gradient-wallpaper.png");
-    background-color: rgb(128, 190, 185);
-    min-height: 100vh;
-}
-
-#blog .card{
-    box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.17);
-    border-radius: 20px;
-}
