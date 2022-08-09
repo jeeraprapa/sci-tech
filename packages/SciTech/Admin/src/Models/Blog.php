@@ -5,11 +5,14 @@ namespace SciTech\Admin\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\HasMedia;
 
-class Blog extends Model
+class Blog extends Model implements HasMedia
 {
     use HasFactory;
     use SoftDeletes;
+    use InteractsWithMedia;
 
     /**
      * The table associated with the model.
@@ -42,5 +45,10 @@ class Blog extends Model
     public function getStatusLabelAttribute()
     {
         return $this->attributes['status'] ? 'เปิด' : 'ปิด';
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(BlogCategory::class);
     }
 }

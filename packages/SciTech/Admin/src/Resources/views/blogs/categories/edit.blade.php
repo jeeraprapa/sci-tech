@@ -13,8 +13,7 @@
                 </div>
                 <div class="card-body p-3">
                     {!! Form::model($category, ['route' => ['admin.blog.category.update', 'id' => $category->id], 'method' => 'put', 'autocomplete' => 'off']) !!}
-                    @include('admin::blogs.categories.partials.general')
-                    {{ Form::submit('Save', ['class' => 'btn btn-primary']) }}
+                        @include('admin::blogs.categories.partials.general')
                     {!! Form::close() !!}
                 </div>
             </div>

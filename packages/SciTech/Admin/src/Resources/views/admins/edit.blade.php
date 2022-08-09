@@ -14,7 +14,6 @@
                 <div class="card-body p-3">
                     {!! Form::model($admin, ['route' => ['admin.staff.update', 'id' => $admin->id], 'method' => 'put', 'autocomplete' => 'off']) !!}
                         @include('admin::admins.partials.general')
-                        {{ Form::submit('Save', ['class' => 'btn btn-primary']) }}
                     {!! Form::close() !!}
                 </div>
             </div>

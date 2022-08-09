@@ -28,4 +28,5 @@
         </div>
     </div>
 </div>
-
+{{ Form::submit('บันทึก', ['class' => 'btn btn-primary']) }}
+<a href="{{ route('admin.blog.category.index') }}" class="btn btn-secondary">ย้อนกลับ</a>

@@ -1,7 +1,7 @@
 @extends('admin::layouts.default')
 
 @section('page_title')
-    {{ __('admin::app.admin.role.title') }}
+    แก้ไขสิทธิ์
 @stop
 
 @section('content')
@@ -14,7 +14,6 @@
                 <div class="card-body p-3">
                     {!! Form::model($role, ['route' => ['admin.role.update', 'id' => $role->id], 'method' => 'put', 'autocomplete' => 'off']) !!}
                         @include('admin::roles.partials.general')
-                        {{ Form::submit('บันทึก', ['class' => 'btn btn-primary']) }}
                     {!! Form::close() !!}
                 </div>
             </div>

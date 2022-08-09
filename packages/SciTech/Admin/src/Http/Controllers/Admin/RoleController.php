@@ -36,7 +36,7 @@ class RoleController extends Controller
         $role->syncPermissions($request->get('permission'));
 
         $request->session()->flash('status', 'success');
-        $request->session()->flash('message', 'Task was successful!');
+        $request->session()->flash('message', 'ดำเนินการสำเร็จ');
         return redirect()->route('admin.role.index');
     }
 
@@ -60,7 +60,7 @@ class RoleController extends Controller
         $role->syncPermissions($request->get('permission'));
 
         $request->session()->flash('status', 'success');
-        $request->session()->flash('message', 'Task was successful!');
+        $request->session()->flash('message', 'ดำเนินการสำเร็จ');
         return redirect()->route('admin.role.index');
     }
 
@@ -70,7 +70,7 @@ class RoleController extends Controller
         $role->delete();
 
         $request->session()->flash('status', 'success');
-        $request->session()->flash('message', 'Task was successful!');
+        $request->session()->flash('message', 'ดำเนินการสำเร็จ');
         return redirect()->route('admin.role.index');
     }
 }

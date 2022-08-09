@@ -5,6 +5,7 @@ namespace SciTech\Admin\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use SciTech\Admin\Http\Requests\Session\AdminLoginRequest;
 
 class SessionController extends Controller
 {
@@ -25,23 +26,26 @@ class SessionController extends Controller
         return view('admin::sessions.login');
     }
 
-    public function store(Request $request)
+    public function store(AdminLoginRequest $request)
     {
-        $credentials = $request->validate([
-            'email' => ['required', 'email'],
-            'password' => ['required'],
-        ]);
-
         $remember = $request->input('remember');
 
-        if (Auth::guard('admin')->attempt($credentials, $remember)) {
+        if (Auth::guard('admin')->attempt($request->only(['email', 'password']), $remember)) {
+            $user = Auth::guard('admin')->user();
+            if(!$user->status){
+                Auth::guard('admin')->logout();
+
+                $request->session()->flash('status', 'danger');
+                $request->session()->flash('message', 'ไม่สามารถเข้าสู่ระบบได้');
+                return redirect()->route('admin.session.create');
+            }
+
             return redirect()->intended(route('admin.dashboard.index'));
         }
 
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ])->onlyInput('email');
-
+        $request->session()->flash('status', 'danger');
+        $request->session()->flash('message', 'ข้อมูลเข้าสู่ระบบไม่ถูกต้อง');
+        return redirect()->route('admin.session.create');
     }
 
     public function destroy()

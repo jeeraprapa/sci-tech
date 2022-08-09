@@ -26,3 +26,5 @@
         @endforeach
     </tbody>
 </table>
+{{ Form::submit('บันทึก', ['class' => 'btn btn-primary']) }}
+<a href="{{ route('admin.role.index') }}" class="btn btn-secondary">ย้อนกลับ</a>

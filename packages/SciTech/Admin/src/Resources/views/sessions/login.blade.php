@@ -8,16 +8,20 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/icheck-bootstrap/icheck-bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/admin/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/admin/css/adminlte.css') }}">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
-    <div class="login-logo">
-        <b>Admin</b> Sci Tech
+    <div class="login-logo d-flex flex-column align-items-center">
+        <img src="{{ asset('vendor/admin/img/logo.png') }}" alt="Logo Image" class="logo-image">
+        <b>Scitech</b>
     </div>
     <div class="card">
         <div class="card-body login-card-body">
             <p class="login-box-msg">เข้าสู่ระบบ</p>
+
+            @include ('admin::commons.message')
+            @include ('admin::commons.error')
 
             {!! Form::open(['route' => 'admin.session.store', 'method' => 'post', 'autocomplete' => 'off', 'id' => 'login-form']) !!}
                 <div class="input-group mb-3">

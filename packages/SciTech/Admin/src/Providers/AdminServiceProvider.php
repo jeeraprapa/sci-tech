@@ -50,6 +50,8 @@ class AdminServiceProvider extends ServiceProvider
     public function register()
     {
         $this->registerConfig();
+
+        $this->registerCommands();
     }
 
     /**

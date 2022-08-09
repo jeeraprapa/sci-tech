@@ -9,9 +9,8 @@ class Editor
 {
     public function uploadImage($field)
     {
-
         $dom = new \DomDocument();
-        $dom->loadHtml($field, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+        $dom->loadHtml('<?xml encoding="utf-8" ?>' . $field, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
         $image_file = $dom->getElementsByTagName('img');
 
         if (!File::exists(public_path('uploads'))) {
@@ -24,8 +23,9 @@ class Editor
                 list($type, $dataImage) = explode(';', $dataImage);
                 list(, $dataImage) = explode(',', $dataImage);
 
+                $uniqueKey = $this->generateRandomString();
                 $img_data = base64_decode($dataImage);
-                $image_name = "/uploads/" . time().$key.'.png';
+                $image_name = "/uploads/" . time() . $key . $uniqueKey . '.png';
                 $path = public_path() . $image_name;
                 file_put_contents($path, $img_data);
 
@@ -39,7 +39,7 @@ class Editor
 
     public function checkBase64Image($value) {
         $explode = explode(',', $value);
-        $allow = ['png', 'jpg'];
+        $allow = ['png', 'jpg', 'jpeg'];
         $format = str_replace(
             [
                 'data:image/',
@@ -63,5 +63,16 @@ class Editor
         }
 
         return true;
+    }
+
+    public function generateRandomString($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+
+        return $randomString;
     }
 }

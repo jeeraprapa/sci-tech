@@ -15,6 +15,10 @@ Route::group(['middleware' => ['web', 'auth:admin', 'permission'], 'prefix' => '
         Route::get('/{id}/edit', [BlogController::class, 'edit'])->name('admin.blog.edit');
         Route::put('/{id}', [BlogController::class, 'update'])->name('admin.blog.update');
         Route::delete('/{id}', [BlogController::class, 'destroy'])->name('admin.blog.destroy');
+        Route::get('/{blog}/media', [BlogController::class, 'media'])->name('admin.blog.media');
+        Route::post('/{blog}/media/create', [BlogController::class, 'mediaStore'])->name('admin.blog.media.store');
+        Route::get('/{blog}/media/{id}/thumbnail', [BlogController::class, 'mediaThumbnail'])->name('admin.blog.media.thumbnail');
+        Route::get('/{blog}/media/{id}/delete', [BlogController::class, 'mediaDestroy'])->name('admin.blog.media.destroy');
 
         Route::prefix('categories')->group(function () {
             Route::get('/', [CategoryController::class, 'index'])->name('admin.blog.category.index');
