@@ -12,7 +12,7 @@
 
 <body>
     <div class="wrapper">
-        <header>
+        <header class="header">
             <nav class="navbar navbar-expand-lg navbar-light bg-white">
                 <div class="container-fluid px-5">
                     <a class="navbar-brand" href="#">
@@ -115,7 +115,6 @@
 
     </div>
 </body>
-<script src="{{asset('vendors/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('vendors/js/bootstrap.bundle.min.js')}}"></script>
 
 </html>
