@@ -1,144 +1,149 @@
 @import url(https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap);
-#main{
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: bottom center;
-    background-image: url("/images/index/background.png");
-    height: 100vh;
-    -o-object-fit: cover;
-       object-fit: cover;
-}
-#main .img-main{
-    padding-top: 5%;
-    width: 100%;
-    height: 100vh;
-    -o-object-fit: contain;
-       object-fit: contain;
+#main {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom center;
+  background-image: url("/images/index/background.png");
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-#main .content{
-    position: fixed;
-    top: 30%;
-    color: white;
-    text-align: center;
-}
-#main .content h1{
-    -webkit-text-stroke: 2px  #004030;
-    text-shadow: 0px 3px 27px #043923;
-    font-weight: 600;
-    font-size: 42px;
-    line-height: 63px;
-}
-#main .content h2{
-    text-shadow: 0px 3px 27px #043923;
+#main .img-main {
+  padding-top: 5%;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
-#main .content a{
-    background: rgba(44, 68, 52, 0.66);
-    border: 2px solid #FFFFFF;
-    -webkit-backdrop-filter: blur(6px);
-            backdrop-filter: blur(6px);
-    border-radius: 14px;
-    padding: 14px 37px;
-    color: white;
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 30px;
-    text-decoration: none;
+#main .content {
+  position: fixed;
+  top: 30%;
+  color: white;
+  text-align: center;
 }
 
-#second{
-    background: radial-gradient(79.54% 79.54% at 50.69% 79.54%, #F4FFED 0%, #B6C2AE 100%);
-}
-#second header h1{
-    background: #FFFFFF;
-    box-shadow: 0px 4px 14px rgba(83, 155, 107, 0.19);
-    border-radius: 22px;
-    padding: 14px 84px;
-}
-#second header h1{
-    width: 1006px;
-    color: #333333;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 26px;
-    line-height: 39px;
-}
-#second header h1 span{
-    color: #D49B48;
+#main .content h1 {
+  -webkit-text-stroke: 2px #004030;
+  text-shadow: 0px 3px 27px #043923;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 63px;
 }
 
-#second header nav .navbar-toggler{
-    background-color: white;
+#main .content h2 {
+  text-shadow: 0px 3px 27px #043923;
 }
 
-#second header nav .navbar-collapse{
-    background-color: white;
-    padding: 2rem;
-    border-radius: 22px;
+#main .content a {
+  background: rgba(44, 68, 52, 0.66);
+  border: 2px solid #FFFFFF;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  border-radius: 14px;
+  padding: 14px 37px;
+  color: white;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  text-decoration: none;
 }
 
-#second header nav .navbar-collapse a{
-    color: #333333;
+#second {
+  background: radial-gradient(79.54% 79.54% at 50.69% 79.54%, #F4FFED 0%, #B6C2AE 100%);
 }
 
+#second header h1 {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 14px rgba(83, 155, 107, 0.19);
+  border-radius: 22px;
+  padding: 14px 84px;
+}
+
+#second header h1 {
+  width: 1006px;
+  color: #333333;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 39px;
+}
+
+#second header h1 span {
+  color: #D49B48;
+}
+
+#second header nav .navbar-toggler {
+  background-color: white;
+}
+
+#second header nav .navbar-collapse {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 22px;
+}
+
+#second header nav .navbar-collapse a {
+  color: #333333;
+}
 
 #blog {
-    background-size: 100%;
-    background-image: url("/images/gradient-wallpaper.png");
-    background-color: rgb(128, 190, 185);
-    min-height: 100vh;
+  background-size: 100%;
+  background-image: url("/images/gradient-wallpaper.png");
+  background-color: rgb(128, 190, 185);
+  min-height: 100vh;
 }
 
-#blog .card{
-    box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.17);
-    border-radius: 20px;
+#blog .card {
+  box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.17);
+  border-radius: 20px;
 }
 
 #modal-blog .btn-close {
-    background-image: url("/images/Vector.png");
-    background-size: 100%;
+  background-image: url("/images/Vector.png");
+  background-size: 100%;
 }
 
 #modal-blog .titletext {
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #modal-blog .modal-text {
-    padding: 1rem 1rem;
+  padding: 1rem 1rem;
 }
-body{
-    font-family: 'Kanit', sans-serif;
+
+body {
+  font-family: "Kanit", sans-serif;
 }
 
 .bg-white {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
-.header nav{
-    box-shadow: 0px 4px 14px rgba(9, 56, 25, 0.07);
+.header nav {
+  box-shadow: 0px 4px 14px rgba(9, 56, 25, 0.07);
 }
 
-.pt-80{
-    padding-top: 80px;
+.pt-80 {
+  padding-top: 80px;
 }
 
-.position-right-0{
-    right: 0;
+.position-right-0 {
+  right: 0;
 }
 
-#tooltip{
-    position: fixed;
-    border: 1px solid #e8ecf2;
-    display: none;
-    border-radius: 1000px;
-    background-color: #fff;
-    color: #243876;
-    text-align: center;
-    padding: 10px;
-    font-size: 18px;
+#tooltip {
+  position: fixed;
+  border: 1px solid #e8ecf2;
+  display: none;
+  border-radius: 1000px;
+  background-color: #fff;
+  color: #243876;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
 }
-
