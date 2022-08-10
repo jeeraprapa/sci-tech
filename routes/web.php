@@ -15,12 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
 Route::get('/main', function () {
     return view('second.index');
-});
+})->name('main');
 
 Route::get('/blogs', function () {
     return view('blog');
-});
+})->name('blogs');

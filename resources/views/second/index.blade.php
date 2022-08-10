@@ -11,7 +11,9 @@
 <body>
     <div class="wrapper" id="second">
         <header class="fixed-top m-3 d-flex justify-content-between align-items-center">
-            <img src="{{asset('images/logo.png')}}" alt="">
+            <a href="{{route('index')}}">
+                <img src="{{asset('images/logo.png')}}" alt="">
+            </a>
             <h1 class="text-center">
                 <span class="d-block">
                     นิทรรศการ
@@ -92,27 +94,6 @@
         }).click(function(){
             url = $(this).attr('data-link');
             window.location.href = url;
-        });
-
-        $('.navbar-brand').mouseover(function (){
-
-            var name = "วัคซีน เครื่องมือต้านการระบาดของโรคติดเชื้ออุบัติใหม่";
-            name = "<img src='{{asset('images/pin.png')}}'>" + name;
-            $('#tooltip span').html(name);
-
-            // show tooltip
-            $('#tooltip').stop(false, true).fadeIn(1);
-
-            $(this).mousemove(function () {
-                $('#tooltip').css({
-                    'top': mouseY + 50,
-                    'left': mouseX + 50
-                });
-            });
-
-        }).mouseout(function () {
-            // hide tooltip
-            $('#tooltip').stop(false, true).fadeOut(2000);
         });
 
     });
