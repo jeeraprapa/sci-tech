@@ -1,5 +1,7 @@
-@extends('layouts.base',['title'=>"Computer Science"])
+@extends('layouts.base',['title'=>"แขนงวิชาวิทยาการคอมพิวเตอร์"])
 
 @section('content')
+    <section id="booth">
 
+    </section>
 @endsection

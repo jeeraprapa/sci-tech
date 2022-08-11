@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap);
+body {
+  font-family: "Kanit", sans-serif;
+}
+
 #main {
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -212,13 +216,6 @@
   font-size: 18px;
   line-height: 27px;
 }
-#modal-blog ::-webkit-scrollbar {
-  width: 10px;
-}
-#modal-blog ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 10px 0 16px rgba(0, 0, 0, 0.5);
-}
 
 @media screen and (min-width: 320px) and (max-width: 900px) {
   #blog .text-header {
@@ -243,16 +240,13 @@
     line-height: 24px;
   }
 }
-body {
-  font-family: "Kanit", sans-serif;
-}
-
-.bg-white {
-  background-color: #ffffff;
-}
-
-.header nav {
-  box-shadow: 0px 4px 14px rgba(9, 56, 25, 0.07);
+#booth {
+  min-height: calc(100vh - 16px);
+  background-image: url("/images/bg-booth.png");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-size: cover;
+  margin-top: -70px;
 }
 
 @media screen and (min-width: 992px) {
@@ -263,4 +257,33 @@ body {
 
 .position-right-0 {
   right: 0;
+}
+
+header.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 14px rgba(9, 56, 25, 0.07);
+}
+header.header .navbar-nav .nav-link {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  color: #333333;
+}
+@media screen and (min-width: 992px) {
+  header.header .navbar-nav .nav-link:not(:last-child) {
+    border-right: 1px solid #D9D9D9;
+  }
+}
+header.header .navbar-nav .nav-link.active {
+  color: #688F4D;
+}
+header.header #navbarHamburger {
+  z-index: 9999;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0px 4px 14px rgba(9, 56, 25, 0.07);
+}
+header.header #navbarHamburger .nav-link {
+  border: none !important;
 }

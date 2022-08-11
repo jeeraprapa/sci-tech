@@ -21,7 +21,11 @@ Route::get('/main', function () {
     return view('second.index');
 })->name('main');
 
-Route::get('/blogs/computer-science', function () {
+Route::get('/blogs', function () {
+    return view('blog');
+})->name('blogs');
+
+Route::get('/booth/computer-science', function () {
     return view('booth.com-sci');
 })->name('booth.com-sci');
 

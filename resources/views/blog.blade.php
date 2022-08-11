@@ -12,26 +12,7 @@
 
 <body>
     <div class="wrapper">
-        <header class="header">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white">
-                <div class="container-fluid px-5">
-                    <a class="navbar-brand" href="#">
-                        <img src="{{asset('images/logo.png')}}" alt="" width="100%" height="60">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                        <div class="navbar-nav row w-100">
-                            <div class="col"><a class="nav-link active" aria-current="page" href="#">ตำราและกิจกรรมการเรียนการสอน</a></div>
-                            <div class="col"><a class="nav-link" href="#">ความเชี่ยวชาญเฉพาะด้านของคณาจารย์</a></div>
-                            <div class="col"><a class="nav-link" href="#">งานวิจัยของนักเรียนและนักศึกษา</a></div>
-                            <div class="col"><a class="nav-link" href="#">กิจกรรมบริการวิชาการสังคม</a></div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
+        @include('layouts.header')
         <main>
             <section id="blog">
                 <div class="container-fluid">
@@ -116,7 +97,7 @@
 
             <!-- Modal -->
             <div class="modal fade" id="modal-blog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-body p-0">
                             <div class="text-title">
