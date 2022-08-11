@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{env('WEB_TITLE','SCI-TECH')}}</title>
-    <link href="{{asset('vendors/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{mix('css/app.css')}}" rel="stylesheet">
+    @include('layouts.meta',['title'=>'นิทรรศการ “การเรียนรู้สาขาวิชาวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยสุโขทัยธรรมาธิราช”'])
 </head>
 <body>
     <div class="wrapper" id="second">
@@ -70,10 +65,23 @@
                 <img src="{{asset('images/main.png')}}" alt="" class="img-fluid w-100" usemap="#area-map">
 
                 <map name="area-map">
-                    <area class="area-map" target="" alt="1" data-name="แขนงวิชาวิทยาการคอมพิวเตอร์" data-type="ระดับปริญาตรี" href="1" coords="13,317,221,187,584,444,307,626,-1,444,9,368" shape="poly">
-                    <area class="area-map" target="" alt="2" data-name="แขนงวิชาเทคโนโลยีดิจิทัล" data-type="ระดับปริญาโท" href="2" coords="471,323,737,120,1150,403,864,568,516,363" shape="poly">
-                    <area class="area-map" target="" alt="3" data-name="แขนงวิชาเทคโนโลยีอุตสาหกรรม" data-type="ระดับปริญาตรี" href="3" coords="218,746,579,533,840,693,493,903" shape="poly">
-                    <area class="area-map" target="" alt="4" data-name="แขนงวิชาเทคโนโลยการจัดการทางวิศวกรรม" data-type="ระดับปริญาโท" href="4" coords="845,678,1220,462,1420,618,1084,836" shape="poly">
+                    <area class="area-map" target="" alt="1"
+                          data-name="แขนงวิชาวิทยาการคอมพิวเตอร์"
+                          data-type="ระดับปริญาตรี" href="{{route('booth.com-sci')}}"
+                          coords="13,317,221,187,584,444,307,626,-1,444,9,368"
+                          shape="poly">
+                    <area class="area-map" target="" alt="2"
+                          data-name="แขนงวิชาเทคโนโลยีดิจิทัล" data-type="ระดับปริญาโท"
+                          href="{{route('booth.tech-digital')}}" coords="471,323,737,120,1150,403,864,568,516,363"
+                          shape="poly">
+                    <area class="area-map" target="" alt="3"
+                          data-name="แขนงวิชาเทคโนโลยีอุตสาหกรรม"
+                          data-type="ระดับปริญาตรี" href="{{route('booth.industrial-tech')}}"
+                          coords="218,746,579,533,840,693,493,903" shape="poly">
+                    <area class="area-map" target="" alt="4"
+                          data-name="แขนงวิชาเทคโนโลยการจัดการทางวิศวกรรม"
+                          data-type="ระดับปริญาโท" href="{{route('booth.engineer-management')}}"
+                          coords="845,678,1220,462,1420,618,1084,836" shape="poly">
                 </map>
             </div>
         </main>

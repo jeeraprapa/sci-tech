@@ -21,6 +21,18 @@ Route::get('/main', function () {
     return view('second.index');
 })->name('main');
 
-Route::get('/blogs', function () {
-    return view('blog');
-})->name('blogs');
+Route::get('/blogs/computer-science', function () {
+    return view('booth.com-sci');
+})->name('booth.com-sci');
+
+Route::get('/booth/digital-technology', function () {
+    return view('booth.tech-digital');
+})->name('booth.tech-digital');
+
+Route::get('/booth/industrial-technology', function () {
+    return view('booth.industrial-tech');
+})->name('booth.industrial-tech');
+
+Route::get('/booth/engineer-management-technology', function () {
+    return view('booth.engineer-management');
+})->name('booth.engineer-management');
