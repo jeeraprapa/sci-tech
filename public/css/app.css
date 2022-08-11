@@ -242,11 +242,42 @@ body {
 }
 #booth {
   min-height: calc(100vh - 16px);
-  background-image: url("/images/bg-booth.png");
+  background: url("/images/bg-booth.png") #FFFFFF;
   background-repeat: no-repeat;
-  background-position-x: 100%;
-  background-size: cover;
+  background-position: 0% 0%;
+  background-size: 100% auto;
   margin-top: -70px;
+  padding-top: 120px;
+}
+#booth header {
+  background: radial-gradient(50% 983.68% at 50% 50%, #FDC12D 0%, #D49B48 100%);
+  border-radius: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 4rem;
+  text-align: center;
+  margin: 1rem auto;
+}
+#booth header h1 {
+  color: white;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 31px;
+}
+#booth header h1 span {
+  font-size: 30px;
+  display: block;
+  color: #313131;
+  font-weight: 400;
+}
+#booth #booth-list {
+  padding: 2rem 0;
+}
+#booth #booth-list div {
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
 }
 
 @media screen and (min-width: 992px) {
