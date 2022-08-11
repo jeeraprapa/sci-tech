@@ -5,24 +5,106 @@
     background-color: rgb(128, 190, 185)
     min-height: 100vh
 
+    .text-header
+        font-weight: bold
+        font-size: 46px
+        line-height: 68px
+        text-align: center
+        -webkit-text-stroke: 2px white
+        -webkit-text-fill-color:transparent
+        background: linear-gradient(269.93deg, #628D00 29.16%, #98CC77 57.24%, #628D00 66.42%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        text-shadow: 0px 3px 4px rgba(124, 133, 105, 0.4)
+        padding: 1rem 3rem
+
+    .content 
+        padding-left: 3rem
+        padding-right: 3rem
 
     .card
         box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.17)
         border-radius: 20px
 
+        h4
+            font-size: 16px
+            font-weight: 600
+
+        p
+            font-size: 14px
+            color: #777777
+            margin-bottom: 0px
+
+        .text-success
+            font-size: 14px
+            color: #628D00 !important
 
 #modal-blog
+    .modal-content
+        border-radius: 1rem
+        padding: 1rem 0
+
+    .modal-title
+        padding: 0.5rem 1rem
+
+    .title
+        display: flex
+        justify-content: space-between
+
     .btn-close
         background-image: url("/images/Vector.png")
         background-size: 100%
+        width: 20px
+        height: 20px
 
+    .text-title
+        color: #333333
+        font-size: 29px
+        font-weight: 600
+        line-height: 33px
+        padding: 1rem 1.5rem
 
-    .titletext
-        display: flex
-        flex-shrink: 0
-        align-items: center
-        justify-content: space-between
+    .date
+        color: #777777
+        font-size: 18px
+        font-weight: 400
+        padding-top: 1rem
 
+    .text-detail
+        padding: 1.5rem 1.5rem
+        font-weight: 400
+        font-size: 18px
+        line-height: 27px
 
-    .modal-text
-        padding: 1rem 1rem
+    ::-webkit-scrollbar
+        width: 10px
+
+    ::-webkit-scrollbar-thumb 
+        border-radius: 10px
+        -webkit-box-shadow: inset 10px 0 16px rgb(0 0 0 / 50%)
+
+@media screen and (min-width: 320px) and (max-width: 900px) 
+    #blog
+        .text-header
+            font-size: 20px
+            -webkit-text-stroke: 1px white
+            line-height: 28px
+            padding: 2rem 1rem 1rem 1rem
+        
+        .content 
+            padding-left: 0rem
+            padding-right: 0rem
+
+    #modal-blog
+        .text-title 
+            font-size: 19px
+            line-height: 26px
+        
+        .date
+            font-size: 14px
+        
+        .text-detail
+            font-size: 16px
+            line-height: 24px
