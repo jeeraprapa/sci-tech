@@ -4,8 +4,11 @@
     background-repeat: no-repeat
     background-position: 0% 0%
     background-size: 100% auto
-    margin-top: -70px
-    padding-top: 120px
+    margin-top: -20px
+    padding-top: 50px
+    @include screen('lg')
+        margin-top: -70px
+        padding-top: 120px
     header
         background: radial-gradient(50% 983.68% at 50% 50%, #FDC12D 0%, #D49B48 100%)
         border-radius: 30px
@@ -17,15 +20,20 @@
             color: white
             font-style: normal
             font-weight: 600
-            font-size: 31px
+            font-size: 22px
             span
-                font-size: 30px
+                font-size: 20px
                 display: block
                 color: #313131
                 font-weight: 400
+                @include screen('lg')
+                    font-size: 30px
+            @include screen('lg')
+                font-size: 31px
     #booth-list
         padding: 2rem 0
         div
             text-align: center
             display: flex
             align-items: flex-end
+            justify-content: center
