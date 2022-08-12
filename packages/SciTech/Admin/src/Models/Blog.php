@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Blog extends Model implements HasMedia
 {
@@ -42,6 +43,8 @@ class Blog extends Model implements HasMedia
         'status' => 'boolean',
     ];
 
+    protected $dates = ['published_at'];
+
     public function getStatusLabelAttribute()
     {
         return $this->attributes['status'] ? 'เปิด' : 'ปิด';
@@ -50,5 +53,12 @@ class Blog extends Model implements HasMedia
     public function category()
     {
         return $this->belongsTo(BlogCategory::class);
+    }
+
+    public function thumbnail ()
+    {
+        return $this->getMedia('images', function (Media $media) {
+            return isset($media->custom_properties['thumbnail']);
+        })->first();
     }
 }

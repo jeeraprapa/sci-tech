@@ -8,6 +8,10 @@
     <title>Document</title>
     <link href="{{asset('vendors/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{mix('css/app.css')}}" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
 </head>
 
 <body>
@@ -20,113 +24,102 @@
 
                     <div class="row align-items-start content">
                         <div class="col-12 col-lg-3 p-4">
-                            <div class="card" data-bs-toggle="modal" data-bs-target="#modal-blog">
+
+                            @foreach($blogs as $blog)
+                            <div class="card" data-bs-toggle="modal" data-bs-target="#modal-blog-{{$blog->id}}">
                                 <div class="card-image">
-                                    <img src="{{asset('images/blog1.png')}}" alt="" class="w-100">
+                                    <img src="{{$blog->thumbnail() ? $blog->thumbnail()->getFullUrl() : ''}}" alt="" class="w-100">
                                 </div>
                                 <div class="card-body">
                                     <h4>
-                                        บริการวิชาการแก่สังคม โครงการพัฒนาคุณภาพชีวิตผู้สูงอายุ
+                                        {{$blog->name}}
                                     </h4>
                                     <p>
-                                        โครงการบริการวิชาการแก่สังคม ระดับมหาวิทยาลัย พื้นที่เทศบาลตำบลท่าศาลา
+                                        {{$blog->short_description}}
                                     </p>
                                     <span class="text-success">
                                         อ่านเพิ่มเติม...
                                     </span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12 col-lg-3 p-4">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="{{asset('images/blog1.png')}}" alt="" class="w-100">
-                                </div>
-                                <div class="card-body">
-                                    <h4>
-                                        บริการวิชาการแก่สังคม โครงการพัฒนาคุณภาพชีวิตผู้สูงอายุ
-                                    </h4>
-                                    <p>
-                                        โครงการบริการวิชาการแก่สังคม ระดับมหาวิทยาลัย พื้นที่เทศบาลตำบลท่าศาลา
-                                    </p>
-                                    <span class="text-success">
-                                        อ่านเพิ่มเติม...
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-3 p-4">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="{{asset('images/blog1.png')}}" alt="" class="w-100">
-                                </div>
-                                <div class="card-body">
-                                    <h4>
-                                        บริการวิชาการแก่สังคม โครงการพัฒนาคุณภาพชีวิตผู้สูงอายุ
-                                    </h4>
-                                    <p>
-                                        โครงการบริการวิชาการแก่สังคม ระดับมหาวิทยาลัย พื้นที่เทศบาลตำบลท่าศาลา
-                                    </p>
-                                    <span class="text-success">
-                                        อ่านเพิ่มเติม...
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-3 p-4">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="{{asset('images/blog1.png')}}" alt="" class="w-100">
-                                </div>
-                                <div class="card-body">
-                                    <h4>
-                                        บริการวิชาการแก่สังคม โครงการพัฒนาคุณภาพชีวิตผู้สูงอายุ
-                                    </h4>
-                                    <p>
-                                        โครงการบริการวิชาการแก่สังคม ระดับมหาวิทยาลัย พื้นที่เทศบาลตำบลท่าศาลา
-                                    </p>
-                                    <span class="text-success">
-                                        อ่านเพิ่มเติม...
-                                    </span>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </section>
 
+            @foreach($blogs as $blog)
             <!-- Modal -->
-            <div class="modal fade" id="modal-blog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade modal-blog" id="modal-blog-{{$blog->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-body p-0">
                             <div class="text-title">
                                 <div class="title">
-                                    <div class=" titletext" id="exampleModalLabel">บริการวิชาการแก่สังคม โครงการพัฒนา คุณภาพชีวิตผู้สูงอายุ</div>
+                                    <div class=" titletext" id="exampleModalLabel">{{$blog->name}}</div>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="date">12/02/2564</div>
+                                <div class="date">
+                                    {{$blog->published_at->format('d/m/Y')}}
+                                </div>
                             </div>
 
                             <div class="image-content">
-                                <img src="{{asset('images/detail-blog1.png')}}" alt="" class="w-100">
-                            </div>
+                                <!-- Slider main container -->
+                                <div class="swiper">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        @foreach($blog->getMedia('images') as $mediaItem)
+                                            @if(!$mediaItem->hasCustomProperty('thumbnail'))
+                                                <div class="swiper-slide">
+                                                    <img src="{{ $mediaItem->getFullUrl() }}" alt="" class="w-100">
+                                                </div>
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
 
+                                    <!-- If we need navigation buttons -->
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+
+                                    <!-- If we need scrollbar -->
+                                    <div class="swiper-scrollbar"></div>
+                                </div>
                             <div class="text-detail">
-                                โครงการบริการวิชาการแก่สังคม ระดับมหาวิทยาลัย พื้นที่เทศบาลตำบลท่าศาลา สำนักวิจัยและบริการวิชาการและคณะวิชา มหาวิทยาลัยพายัพ ร่วมกับเทศบาลตำบลท่าศาลา ดำเนินโครงการบริการวิชาการ ระดับมหาวิทยาลัย ปีการศึกษา 2563 ภายใต้ “โครงการพัฒนาคุณภาพชีวิตผู้สูงอายุ พื้นที่เทศบาลตำบลท่าศาลา อำเภอเมือง จังหวัดเชียงใหม่” โดยมีกลุ่มเป้าหมาย : โรงเรียนเกษียณวัย โดยดำเนินกิจกรรม ในวันที่ 5 กุมภาพันธ์ 2564 เรื่อง “การทำดอกไม้จากผ้าใยบัว เพื่อสร้างรายได้เสริม” วิทยากรและทีมงานจากคณะบริหารธุรกิจและวิทยาศาสตร์ โครงการบริการวิชาการแก่สังคม ระดับมหาวิทยาลัย พื้นที่เทศบาลตำบลท่าศาลา สำนักวิจัยและบริการวิชาการและคณะวิชา มหาวิทยาลัยพายัพ ร่วมกับเทศบาลตำบลท่าศาลา ดำเนินโครงการบริการวิชาการ ระดับมหาวิทยาลัย ปีการศึกษา 2563 ภายใต้
-                                โครงการบริการวิชาการแก่สังคม ระดับมหาวิทยาลัย พื้นที่เทศบาลตำบลท่าศาลา สำนักวิจัยและบริการวิชาการและคณะวิชา มหาวิทยาลัยพายัพ ร่วมกับเทศบาลตำบลท่าศาลา ดำเนินโครงการบริการวิชาการ ระดับมหาวิทยาลัย ปีการศึกษา 2563 ภายใต้ “โครงการพัฒนาคุณภาพชีวิตผู้สูงอายุ พื้นที่เทศบาลตำบลท่าศาลา อำเภอเมือง จังหวัดเชียงใหม่” โดยมีกลุ่มเป้าหมาย : โรงเรียนเกษียณวัย โดยดำเนินกิจกรรม ในวันที่ 5 กุมภาพันธ์ 2564 เรื่อง “การทำดอกไม้จากผ้าใยบัว เพื่อสร้างรายได้เสริม” วิทยากรและทีมงานจากคณะบริหารธุรกิจและวิทยาศาสตร์
+                                {!! $blog->description !!}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            @endforeach
         </main>
 
     </div>
 </body>
 
 <script src="{{asset('vendors/js/bootstrap.bundle.min.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
+<script>
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+    });
+</script>
 
 </html>

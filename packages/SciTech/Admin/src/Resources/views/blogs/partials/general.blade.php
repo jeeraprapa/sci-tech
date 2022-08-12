@@ -38,7 +38,7 @@
     <div class="col-12">
         <div class="form-group">
             {{ Form::label('short_description', 'รายละเอียดอย่างย่อ', array('class' => 'required')) }}
-            {{ Form::textarea('short_description', null, ['class' => 'form-control editor']) }}
+            {{ Form::textarea('short_description', null, ['class' => 'form-control','size'=>'x3']) }}
         </div>
     </div>
 </div>

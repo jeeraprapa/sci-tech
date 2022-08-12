@@ -33,7 +33,6 @@ class BlogController extends Controller
 
         $editor = new Editor();
         $data['description'] = $editor->uploadImage($data['description']);
-        $data['short_description'] = $editor->uploadImage($data['short_description']);
 
         Blog::create($data);
 
@@ -60,7 +59,6 @@ class BlogController extends Controller
 
         $editor = new Editor();
         $data['description'] = $editor->uploadImage($data['description']);
-        $data['short_description'] = $editor->uploadImage($data['short_description']);
 
         $blog->fill($data)->saveOrFail();
 
