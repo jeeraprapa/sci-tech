@@ -22,7 +22,7 @@
                        href="{{route('booth.tech-digital')}}">แขนงวิชาเทคโนโลยีดิจิทัล</a>
                     <a class="nav-link {{request()->routeIs('booth.industrial-tech') ? 'active' : ''}}"
                        href="{{route('booth.industrial-tech')}}">แขนงวิชาเทคโนโลยีอุตสาหกรรม</a>
-                    <a class="nav-link {{request()->routeIs('booth.engineer-management') ? 'active' : ''}}"
+                    <a class="nav-link border-end-0 {{request()->routeIs('booth.engineer-management') ? 'active' : ''}}"
                        href="{{route('booth.engineer-management')}}">แขนงวิชาเทคโนโลยการจัดการทางวิศวกรรม</a>
                     <a class="nav-link d-lg-none" href="{{route('blogs')}}">กิจกรรมบริการวิชาการสังคม</a>
                     <a class="nav-link d-lg-none" href="{{asset('360')}}" target="_blank">งานวิจัยของนักเรียนและนักศึกษา</a>

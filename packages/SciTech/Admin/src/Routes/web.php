@@ -31,6 +31,11 @@ require 'blog-routes.php';
 require 'department-route.php';
 
 /**
- * Department routes.
+ * tTeacher routes.
  */
 require 'teacher-route.php';
+
+/**
+ * Major routes.
+ */
+require 'major-routes.php';

@@ -56,5 +56,12 @@ return [
         'route'      => 'admin.teacher.index',
         'sort'       => 6,
         'icon-class' => 'fas fa-users',
+    ],
+    [
+        'key'        => 'major',
+        'name'       => 'วิชาเอก',
+        'route'      => 'admin.major.index',
+        'sort'       => 6,
+        'icon-class' => 'fas fa-book',
     ]
 ];
