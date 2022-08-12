@@ -49,5 +49,12 @@ return [
         'route'      => 'admin.department.index',
         'sort'       => 5,
         'icon-class' => 'fas fa-list',
+    ],
+    [
+        'key'        => 'teacher',
+        'name'       => 'อาจารย์',
+        'route'      => 'admin.teacher.index',
+        'sort'       => 6,
+        'icon-class' => 'fas fa-users',
     ]
 ];

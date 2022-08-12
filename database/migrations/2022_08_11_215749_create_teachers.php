@@ -22,6 +22,7 @@ class CreateTeachers extends Migration
             $table->longText('eduction')->nullable();
             $table->longText('youtube_url')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
