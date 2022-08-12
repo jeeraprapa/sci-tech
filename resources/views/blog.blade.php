@@ -2,12 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="{{asset('vendors/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{mix('css/app.css')}}" rel="stylesheet">
+    @include('layouts.meta',['title'=>'กิจกรรมบริการวิชาการสังคม'])
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -23,27 +18,31 @@
                     <div class="text-header">กิจกรรมบริการวิชาการสังคม</div>
 
                     <div class="row align-items-start content">
-                        <div class="col-12 col-lg-3 p-4">
 
-                            @foreach($blogs as $blog)
-                            <div class="card" data-bs-toggle="modal" data-bs-target="#modal-blog-{{$blog->id}}">
-                                <div class="card-image">
-                                    <img src="{{$blog->thumbnail() ? $blog->thumbnail()->getFullUrl() : ''}}" alt="" class="w-100">
-                                </div>
-                                <div class="card-body">
-                                    <h4>
-                                        {{$blog->name}}
-                                    </h4>
-                                    <p>
-                                        {{$blog->short_description}}
-                                    </p>
-                                    <span class="text-success">
-                                        อ่านเพิ่มเติม...
-                                    </span>
+                        @foreach($blogs as $blog)
+
+                            <div class="col-12 col-lg-3 p-4">
+                                <div class="card" data-bs-toggle="modal"
+                                     data-bs-target="#modal-blog-{{$blog->id}}">
+                                    <div class="card-image">
+                                        <img
+                                            src="{{$blog->thumbnail() ? $blog->thumbnail()->getFullUrl() : ''}}"
+                                            alt="" class="w-100">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4>
+                                            {{$blog->name}}
+                                        </h4>
+                                        <p>
+                                            {{$blog->short_description}}
+                                        </p>
+                                        <span class="text-success">
+                                            อ่านเพิ่มเติม...
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                            @endforeach
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </section>
@@ -87,6 +86,7 @@
                                     <!-- If we need scrollbar -->
                                     <div class="swiper-scrollbar"></div>
                                 </div>
+                            </div>
                             <div class="text-detail">
                                 {!! $blog->description !!}
                             </div>
@@ -94,10 +94,9 @@
                     </div>
                 </div>
             </div>
-
             @endforeach
-        </main>
 
+        </main>
     </div>
 </body>
 
