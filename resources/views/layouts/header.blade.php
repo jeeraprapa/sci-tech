@@ -16,14 +16,11 @@
             <div class="collapse navbar-collapse justify-content-center"
                  id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link {{request()->routeIs('booth.com-sci') ? 'active' : ''}}"
-                       href="{{route('booth.com-sci')}}">แขนงวิชาวิทยาการคอมพิวเตอร์</a>
-                    <a class="nav-link {{request()->routeIs('booth.tech-digital') ? 'active' : ''}}"
-                       href="{{route('booth.tech-digital')}}">แขนงวิชาเทคโนโลยีดิจิทัล</a>
-                    <a class="nav-link {{request()->routeIs('booth.industrial-tech') ? 'active' : ''}}"
-                       href="{{route('booth.industrial-tech')}}">แขนงวิชาเทคโนโลยีอุตสาหกรรม</a>
-                    <a class="nav-link border-end-0 {{request()->routeIs('booth.engineer-management') ? 'active' : ''}}"
-                       href="{{route('booth.engineer-management')}}">แขนงวิชาเทคโนโลยการจัดการทางวิศวกรรม</a>
+                    @foreach($departments as $department)
+                        <a class="nav-link {{request()->is('*'.$department->slug) ? 'active' : ''}} {{$loop->last ? "border-end-0" : ""}}"
+                           href="{{route('booth',['slug'=>$department->slug])}}">{{$department->name}}</a>
+                    @endforeach
+
                     <a class="nav-link d-lg-none" href="{{route('blogs')}}">กิจกรรมบริการวิชาการสังคม</a>
                     <a class="nav-link d-lg-none" href="{{asset('360')}}" target="_blank">งานวิจัยของนักเรียนและนักศึกษา</a>
                 </div>

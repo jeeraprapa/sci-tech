@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use SciTech\Admin\Models\Department;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        if(\Schema::hasTable('departments'))
+        {
+            $departments= Department::all();
+
+            \View::share('departments', $departments);
+        }
     }
 }
