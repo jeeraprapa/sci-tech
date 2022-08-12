@@ -11,7 +11,7 @@
         <div class="row justify-content-center" id="teacher-list">
             @foreach($department->teachers as $teacher)
                 <div class="col-12 col-md-6 p-4 text-center">
-                    <img src="{{$teacher->getMedia('img')->first()->getFullUrl()}}" alt="" class="img-fluid">
+                    <img src="{{$teacher->getMedia('img')->first()->getFullUrl()}}" alt="" class="w-100">
                     <p class="text-center fw-bold p-2">{{$teacher->name}}</p>
                 </div>
             @endforeach
