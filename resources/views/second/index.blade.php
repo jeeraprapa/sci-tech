@@ -23,10 +23,8 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-center position-absolute position-right-0 mt-4" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-link active" aria-current="page" href="#">ตำราและกิจกรรมการเรียนการสอน</a>
-                                <a class="nav-link" href="#">ความเชี่ยวชาญเฉพาะด้านของคณาจารย์</a>
-                                <a class="nav-link" href="#">งานวิจัยของนักเรียนและนักศึกษา</a>
-                                <a class="nav-link" href="#">กิจกรรมบริการวิชาการสังคม</a>
+                                <a class="nav-link" href="{{asset('360')}}" target="_blank">งานวิจัยของนักเรียนและนักศึกษา</a>
+                                <a class="nav-link" href="{{route('blogs')}}">กิจกรรมบริการวิชาการสังคม</a>
                             </div>
                         </div>
                     </nav>
@@ -48,10 +46,8 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-center position-absolute position-right-0 mt-4" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="#">ตำราและกิจกรรมการเรียนการสอน</a>
-                            <a class="nav-link" href="#">ความเชี่ยวชาญเฉพาะด้านของคณาจารย์</a>
-                            <a class="nav-link" href="#">งานวิจัยของนักเรียนและนักศึกษา</a>
-                            <a class="nav-link" href="#">กิจกรรมบริการวิชาการสังคม</a>
+                            <a class="nav-link" href="{{asset('360')}}" target="_blank">งานวิจัยของนักเรียนและนักศึกษา</a>
+                            <a class="nav-link" href="{{route('blogs')}}">กิจกรรมบริการวิชาการสังคม</a>
                         </div>
                     </div>
                 </nav>

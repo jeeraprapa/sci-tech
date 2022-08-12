@@ -28,7 +28,7 @@ class StoreTeacherRequest extends FormRequest
             'name' => 'required|max:255',
             'email' => 'required|email',
             'department_id' => 'required',
-            'img' => 'required|image|max:10240',
+            'img' => 'required|image',
         ];
     }
 

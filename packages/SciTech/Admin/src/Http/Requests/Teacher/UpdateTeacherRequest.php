@@ -28,7 +28,7 @@ class UpdateTeacherRequest extends FormRequest
             'name' => 'required|max:255',
             'email' => 'required|email',
             'department_id' => 'required',
-            'img' => 'image|max:10240',
+            'img' => 'image',
         ];
     }
 

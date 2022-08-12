@@ -297,6 +297,39 @@ body {
   justify-content: center;
 }
 
+#teacher header {
+  background: radial-gradient(50% 983.68% at 50% 50%, #97d267 0%, #237707 100%);
+  border-radius: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 4rem;
+  text-align: center;
+  margin: 1rem auto;
+}
+#teacher header h1 {
+  color: white;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+}
+#teacher header h1 span {
+  font-size: 20px;
+  display: block;
+  color: #313131;
+  font-weight: 400;
+}
+@media screen and (min-width: 992px) {
+  #teacher header h1 span {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #teacher header h1 {
+    font-size: 31px;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .pt-lg-80 {
     padding-top: 80px;

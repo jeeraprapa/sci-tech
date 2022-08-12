@@ -16,7 +16,6 @@
             <div class="collapse navbar-collapse justify-content-center"
                  id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    {{--                    <a class="nav-link {{request()->routeIs('home') ? 'active' : ''}}" href="#">งานวิจัยของนักเรียนและนักศึกษา</a>--}}
                     <a class="nav-link {{request()->routeIs('booth.com-sci') ? 'active' : ''}}"
                        href="{{route('booth.com-sci')}}">แขนงวิชาวิทยาการคอมพิวเตอร์</a>
                     <a class="nav-link {{request()->routeIs('booth.tech-digital') ? 'active' : ''}}"
@@ -25,8 +24,8 @@
                        href="{{route('booth.industrial-tech')}}">แขนงวิชาเทคโนโลยีอุตสาหกรรม</a>
                     <a class="nav-link {{request()->routeIs('booth.engineer-management') ? 'active' : ''}}"
                        href="{{route('booth.engineer-management')}}">แขนงวิชาเทคโนโลยการจัดการทางวิศวกรรม</a>
-                    <a class="nav-link {{request()->routeIs('blogs') ? 'active' : ''}}"
-                       href="{{route('blogs')}}">กิจกรรมบริการวิชาการสังคม</a>
+                    <a class="nav-link d-lg-none" href="{{route('blogs')}}">กิจกรรมบริการวิชาการสังคม</a>
+                    <a class="nav-link d-lg-none" href="{{asset('360')}}" target="_blank">งานวิจัยของนักเรียนและนักศึกษา</a>
                 </div>
             </div>
             <button type="button" class="navbar-toggler d-none d-lg-inline-block border-0" data-bs-toggle="collapse"
@@ -41,10 +40,8 @@
                 class="collapse navbar-collapse justify-content-center position-absolute position-right-0 mt-4 bg-white"
                 id="navbarHamburger">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">ตำราและกิจกรรมการเรียนการสอน</a>
-                    <a class="nav-link" href="#">ความเชี่ยวชาญเฉพาะด้านของคณาจารย์</a>
-                    <a class="nav-link" href="#">งานวิจัยของนักเรียนและนักศึกษา</a>
-                    <a class="nav-link" href="#">กิจกรรมบริการวิชาการสังคม</a>
+                    <a class="nav-link" href="{{asset('360')}}" target="_blank">งานวิจัยของนักเรียนและนักศึกษา</a>
+                    <a class="nav-link" href="{{route('blogs')}}">กิจกรรมบริการวิชาการสังคม</a>
                 </div>
             </div>
         </nav>

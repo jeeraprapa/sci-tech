@@ -24,4 +24,6 @@
             </div>
         </div>
     </section>
+
+{{--    @include('teacher.list')--}}
 @endsection
