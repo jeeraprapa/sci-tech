@@ -30,8 +30,8 @@ class StoreBlogRequest extends FormRequest
             'category_id' => 'required',
             'published_at' => 'required|date_format:Y-m-d H:i',
             'status' => 'required',
-            'short_description' => 'required|max:65535',
-            'description' => 'required|max:65535',
+            'short_description' => 'required',
+            'description' => 'required',
         ];
     }
 

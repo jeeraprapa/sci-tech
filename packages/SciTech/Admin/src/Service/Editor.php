@@ -4,6 +4,7 @@ namespace SciTech\Admin\Service;
 
 use File;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
 
 class Editor
 {
@@ -27,7 +28,15 @@ class Editor
                 $img_data = base64_decode($dataImage);
                 $image_name = "/uploads/" . time() . $key . $uniqueKey . '.png';
                 $path = public_path() . $image_name;
-                file_put_contents($path, $img_data);
+                if(env('MEDIA_DISK') != 's3'){
+                    file_put_contents($path, $img_data);
+                }else{
+                    $file_path = 'editor/'.$uniqueKey.'.jpg';
+                    Storage::disk('s3')->put($file_path, $img_data, 'public');
+
+                    $image_name = Storage::disk('s3')->url($file_path);
+                }
+
 
                 $image->removeAttribute('src');
                 $image->setAttribute('src', $image_name);
