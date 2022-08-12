@@ -13,7 +13,7 @@ class UpdateTeachers extends Migration
      */
     public function up()
     {
-        Schema::table('majors', function (Blueprint $table) {
+        Schema::table('teachers', function (Blueprint $table) {
             $table->renameColumn('eduction','education');
         });
     }
