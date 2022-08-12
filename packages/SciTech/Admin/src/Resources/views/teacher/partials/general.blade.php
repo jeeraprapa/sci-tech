@@ -25,8 +25,8 @@
     </div>
     <div class="col-12">
         <div class="form-group">
-            {{ Form::label('eduction', 'ประวัติการศึกษา', array('class' => 'required')) }}
-            {{ Form::textarea('eduction', null, ['class' => 'form-control','size'=>'x3']) }}
+            {{ Form::label('education', 'ประวัติการศึกษา', array('class' => 'required')) }}
+            {{ Form::textarea('education', null, ['class' => 'form-control','size'=>'x3']) }}
         </div>
     </div>
     <div class="col-12">

@@ -21,7 +21,7 @@ class Teacher extends Model implements HasMedia
         'name',
         'email',
         'tel',
-        'eduction',
+        'education',
         'youtube_url',
     ];
 
