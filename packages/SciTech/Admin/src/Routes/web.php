@@ -29,3 +29,8 @@ require 'blog-routes.php';
  * Department routes.
  */
 require 'department-route.php';
+
+/**
+ * Department routes.
+ */
+require 'teacher-route.php';

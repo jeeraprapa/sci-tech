@@ -45,7 +45,7 @@ return [
     ],
     [
         'key'        => 'department',
-        'name'       => 'แขนง',
+        'name'       => 'แขนงวิชา',
         'route'      => 'admin.department.index',
         'sort'       => 5,
         'icon-class' => 'fas fa-list',
