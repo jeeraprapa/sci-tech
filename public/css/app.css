@@ -76,7 +76,7 @@ body {
 }
 
 #second {
-  background: radial-gradient(79.54% 79.54% at 50.69% 79.54%, #F4FFED 0%, #B6C2AE 100%);
+  background: #bcc7b3;
   min-height: 100vh;
 }
 #second header h1 {
@@ -438,4 +438,12 @@ header.header #navbarHamburger .nav-link {
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
   color: white;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.z-index-99 {
+  z-index: 99;
 }

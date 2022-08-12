@@ -57,8 +57,8 @@
             <div class="d-lg-none">
                 <img src="{{asset('images/sm-main.png')}}" alt="" class="img-fluid w-100">
             </div>
-            <div class="d-none d-lg-block">
-                <img src="{{asset('images/main.png')}}" alt="" class="img-fluid w-100" usemap="#area-map">
+            <div class="d-none d-lg-block position-relative" id="video-container">
+                <img src="{{asset('images/main.png')}}" alt="" class="img-fluid w-100 opacity-0 z-index-99" usemap="#area-map">
 
                 <map name="area-map">
                     <area class="area-map" target="" alt="1"
@@ -79,6 +79,10 @@
                           data-type="ระดับปริญาโท" href="{{route('booth.engineer-management')}}"
                           coords="845,678,1220,462,1420,618,1084,836" shape="poly">
                 </map>
+
+                <video autoplay muted loop preload="auto" class="position-absolute w-100 top-0">
+                    <source src="{{asset('video/video.mp4')}}" type="video/mp4">
+                </video>
             </div>
         </main>
         <div id="tooltip" style=""><span></span></div>
