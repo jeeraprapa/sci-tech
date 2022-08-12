@@ -32,7 +32,7 @@
                         </div>
                         <div class="row py-3">
                             <div class="col-sm-12 col-md-3 text-center">
-                                <img src="{{asset('images/teacher/teacher.jpg')}}" alt="" class="img-fluid px-5 p-md-0">
+                                <img src="{{$teacher->getMedia('img')->first()->getFullUrl()}}" alt="" class="img-fluid px-5 p-md-0">
                                 <p class="py-3">{{$teacher->name}}</p>
                             </div>
                             <div class="col-sm-12 col-md-9">
