@@ -19,7 +19,8 @@ class Major extends Model implements HasMedia
     protected $fillable = [
         'department_id',
         'name',
-        'youtube_url'
+        'youtube_url',
+        'detail'
     ];
 
     public function department ()

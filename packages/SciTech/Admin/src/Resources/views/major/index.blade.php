@@ -49,11 +49,16 @@
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
                                             <li>
-                                                {{ Html::trash('ลบ', route('admin.teacher.destroy', $value->id), ['delete_button_class' => 'btn btn-link text-danger text-gradient px-3 mb-0', 'delete_button_icon_class' => 'far fa-trash-alt me-2']) }}
+                                                {{ Html::trash('ลบ', route('admin.major.destroy', $value->id), ['delete_button_class' => 'btn btn-link text-danger text-gradient px-3 mb-0', 'delete_button_icon_class' => 'far fa-trash-alt me-2']) }}
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" href="{{ route('admin.teacher.edit', ['id' => $value->id]) }}">
+                                                <a class="dropdown-item" href="{{ route('admin.major.edit', ['id' => $value->id]) }}">
                                                     <i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i> แก้ไข
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="{{ route('admin.major.media', ['major' => $value->id]) }}">
+                                                    <i class="fas fa-image text-dark me-2" aria-hidden="true"></i> รูปภาพ
                                                 </a>
                                             </li>
                                         </ul>

@@ -7,6 +7,7 @@ use SciTech\Admin\Http\Requests\Major\StoreMajorRequest;
 use SciTech\Admin\Http\Requests\Major\UpdateMajorRequest;
 use SciTech\Admin\Models\Department;
 use SciTech\Admin\Models\Major;
+use SciTech\Admin\Service\Editor;
 
 class MajorController extends Controller
 {
@@ -29,6 +30,9 @@ class MajorController extends Controller
     public function store(StoreMajorRequest $request)
     {
         $data = $request->all();
+
+        $editor = new Editor();
+        $data['detail'] = $editor->uploadImage($data['detail']);
 
         $major = Major::create($data);
 
@@ -60,6 +64,9 @@ class MajorController extends Controller
 
         $major = Major::findOrFail($id);
 
+        $editor = new Editor();
+        $data['detail'] = $editor->uploadImage($data['detail']);
+
         $major->fill($data)->saveOrFail();
 
         if($request->hasFile('img') && $request->file('img')->isValid()) {
@@ -81,5 +88,49 @@ class MajorController extends Controller
         $request->session()->flash('status', 'success');
         $request->session()->flash('message', 'ดำเนินการสำเร็จ');
         return redirect()->route('admin.major.index');
+    }
+
+    public function media(Major $major)
+    {
+        return view('admin::major.media')->with('major', $major);
+    }
+
+    public function mediaStore(Request $request, Major $major)
+    {
+        if($request->hasFile('file') && $request->file('file')->isValid()){
+            $media = $major->addMediaFromRequest('file')
+                          ->toMediaCollection('posters');
+
+            return response()->json([
+                'id' => $media->id,
+            ]);
+        }
+    }
+
+    public function mediaThumbnail(Request $request, Major $major, $id)
+    {
+        $mediaItems = $major->getMedia('posters');
+        foreach($mediaItems as $mediaItem){
+            $mediaItem->forgetCustomProperty('thumbnail');
+            $mediaItem->save();
+        }
+
+        $mediaItem = $major->getMedia('posters')->where('id', $id)->first();
+        $mediaItem->setCustomProperty('thumbnail', 'true');
+        $mediaItem->save();
+
+        $request->session()->flash('status', 'success');
+        $request->session()->flash('message', 'ดำเนินการสำเร็จ');
+        return redirect()->route('admin.major.media', ['major' => $major->id]);
+    }
+
+    public function mediaDestroy(Request $request, Major $major, $id)
+    {
+        $mediaItem = $major->getMedia('posters')->where('id', $id)->first();
+        $mediaItem->delete();
+
+        $request->session()->flash('status', 'success');
+        $request->session()->flash('message', 'ดำเนินการสำเร็จ');
+        return redirect()->route('admin.major.media', ['major' => $major->id]);
     }
 }

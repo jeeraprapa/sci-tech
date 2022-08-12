@@ -23,6 +23,12 @@
             {{ Form::file('img', null, ['class' => 'form-control']) }}
         </div>
     </div>
+    <div class="col-12">
+        <div class="form-group">
+            {{ Form::label('detail', 'Detail', array('class' => 'required')) }}
+            {{ Form::textarea('detail', null, ['class' => 'form-control editor']) }}
+        </div>
+    </div>
 </div>
 {{ Form::submit('บันทึก', ['class' => 'btn btn-primary']) }}
 <a href="{{ route('admin.major.index') }}" class="btn btn-secondary">ย้อนกลับ</a>
