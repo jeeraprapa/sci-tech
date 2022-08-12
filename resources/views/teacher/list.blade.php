@@ -11,16 +11,16 @@
         <div class="row justify-content-center" id="teacher-list">
             @foreach($department->teachers as $teacher)
             <div class="col-12 col-md-6 col-lg-2 p-4 text-center">
-                <img src="{{$teacher->getMedia('img')->first()->getFullUrl()}}" alt="" class="img-fluid" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img src="{{$teacher->getMedia('img')->first()->getFullUrl()}}" alt="" class="w-100" data-bs-toggle="modal" data-bs-target="#teacherModal-{{$teacher->id}}">
                 <p class="text-center fw-bold p-2">{{$teacher->name}}</p>
             </div>
             @endforeach
         </div>
 
 
-
+    @foreach($department->teachers as $teacher)
         <!-- Modal -->
-        <div class="modal fade modal-blog" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade modal-blog" id="teacherModal-{{$teacher->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content p-0">
                     <div class="modal-body">
@@ -33,29 +33,28 @@
                         <div class="row py-3">
                             <div class="col-sm-12 col-md-3 text-center">
                                 <img src="{{asset('images/teacher/teacher.jpg')}}" alt="" class="img-fluid px-5 p-md-0">
-                                <p class="py-3">อาจารย์ชาลิสา หน่อแก้ว</p>
+                                <p class="py-3">{{$teacher->name}}</p>
                             </div>
                             <div class="col-sm-12 col-md-9">
                                 <div class="row lh-lg">
                                     <div class="col-4 text-success"> แขนงวิชา : </div>
-                                    <div class="col-8 text-detail"> นอนอย่างเดียว </div>
+                                    <div class="col-8 text-detail"> {{$department->name}} </div>
                                     <div class="col-4 text-success">ประวัติการศึกษา :</div>
                                     <div class="col-8 text-detail">
-                                        <ul>
-                                            <li>ปี 2524 วิทยาศาสตรบัณฑิต สาขาชีววิทยา / ม.รามคำแหง</li>
-                                            <li>ปี 2524 วิทยาศาสตรมหาบัณฑิต สาขาสัตววิทยา / ม.เกษตรศาสตร์</li>
-                                        </ul>
+                                        {!! nl2br($teacher->education) !!}
                                     </div>
                                     <div class="col-4 text-success"> E-Mail : </div>
-                                    <div class="col-8 text-detail"> mail@mail.com </div>
+                                    <div class="col-8 text-detail"> {{$teacher->email}} </div>
                                     <div class="col-4 text-success"> Tel : </div>
-                                    <div class="col-8 text-detail"> 0999999999 </div>
+                                    <div class="col-8 text-detail"> {{$teacher->tel}} </div>
+                                    @if($teacher->youtube_url)
                                     <div class="col-12 text-success"> วีดีโอแนะนำอาจารย์ : </div>
                                     <div class="col-12 py-4">
                                         <div class="ratio ratio-16x9">
-                                            <iframe src="https://www.youtube.com/embed/v7bnOxV4jAc" title="[MV] IU(아이유)_LILAC(라일락)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="border-radius: 12px;" allowfullscreen></iframe>
+                                            <iframe src="{{$teacher->youtube_url}}" style="border-radius: 12px;" allowfullscreen></iframe>
                                         </div>
                                     </div>
+                                    @endif
 
                                 </div>
                             </div>
@@ -66,6 +65,6 @@
                 </div>
             </div>
         </div>
-
+    @endforeach
     </div>
 </section>
