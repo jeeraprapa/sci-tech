@@ -42,5 +42,12 @@ return [
         'route'      => 'admin.blog.category.index',
         'sort'       => 2,
         'icon-class' => 'fas fa-newspaper',
+    ],
+    [
+        'key'        => 'department',
+        'name'       => 'แขนง',
+        'route'      => 'admin.department.index',
+        'sort'       => 5,
+        'icon-class' => 'fas fa-list',
     ]
 ];

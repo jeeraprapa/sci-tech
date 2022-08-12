@@ -18,7 +18,7 @@
                     มหาวิทยาลัยสุโขทัยธรรมาธิราช
                 </h2>
                 <div class="p-4">
-                    <a href="{{route('main')}}" class="d-sm-inline-flex align-items-center d-block mb-4">
+                    <a href="{{asset('360')}}" class="d-sm-inline-flex align-items-center d-block mb-4" target="_blank">
                         เข้าชม 360°
                     </a>
                     <a href="{{route('main')}}" class="d-sm-inline-flex align-items-center d-block mb-4">

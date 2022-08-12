@@ -24,3 +24,8 @@ require 'admin-routes.php';
  * Blog routes.
  */
 require 'blog-routes.php';
+
+/**
+ * Department routes.
+ */
+require 'department-route.php';
