@@ -25,6 +25,8 @@ Route::get('/main', function () {
 
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
 
+Route::get('/booth/major/{slug}', [BoothController::class,'major'])->name('booth.major');
+
 Route::get('/booth/{slug}', [BoothController::class,'view'])->name('booth');
 
 Route::get('/booth/computer-science', function () {

@@ -28,6 +28,7 @@ class UpdateMajorRequest extends FormRequest
             'name' => 'required|max:255',
             'department_id' => 'required',
             'img' => 'image',
+            'slug' => ['required', 'max:255', 'regex:/^[a-zA-Z0-9_-]+$/u', Rule::unique('majors')->whereNull('deleted_at')->ignore($this->id)],
         ];
     }
 
@@ -40,7 +41,11 @@ class UpdateMajorRequest extends FormRequest
     {
         return [
             'name.required' => 'ชื่อห้ามว่าง',
-            'name.max' => 'ชื่อต้องมีความยาวตัวอักษรไม่เกิน 255 ตัวอักษร'
+            'name.max' => 'ชื่อต้องมีความยาวตัวอักษรไม่เกิน 255 ตัวอักษร',
+            'slug.required' => 'slug ห้ามว่าง',
+            'slug.max' => 'slug ต้องมีความยาวตัวอักษรไม่เกิน 255 ตัวอักษร',
+            'slug.regex' => 'slug มีรูปแบบไม่ถูกต้อง',
+            'slug.unique' => 'slug นี้ไม่สามารถใช้ได้',
         ];
     }
 }

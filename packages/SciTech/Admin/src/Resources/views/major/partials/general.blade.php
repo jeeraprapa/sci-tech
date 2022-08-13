@@ -19,13 +19,22 @@
     </div>
     <div class="col-6">
         <div class="form-group">
-            {{ Form::label('img', 'Image', array('class' => 'required')) }}
+            {{ Form::label('slug', 'Slug', array('class' => 'required')) }}
+            {{ Form::text('slug', null, ['class' => 'form-control']) }}
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group">
+            {{ Form::label('img', 'ภาพบูธ', array('class' => 'required')) }}
             {{ Form::file('img', null, ['class' => 'form-control']) }}
+            @if(!empty($major))
+                <img src="{{$major->getMedia('img')->first()->getFullUrl()}}" alt="" class="img-thumbnail">
+            @endif
         </div>
     </div>
     <div class="col-12">
         <div class="form-group">
-            {{ Form::label('detail', 'Detail', array('class' => 'required')) }}
+            {{ Form::label('detail', 'หลักสูตร', array('class' => 'required')) }}
             {{ Form::textarea('detail', null, ['class' => 'form-control editor']) }}
         </div>
     </div>

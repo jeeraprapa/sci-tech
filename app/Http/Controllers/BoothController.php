@@ -14,4 +14,12 @@ class BoothController
 
         return view('booth.index',compact('department'));
     }
+
+    public function major ($slug)
+    {
+        $major = Major::where('slug', $slug)->firstOrFail();
+        $department = $major->department;
+
+        return view('booth.detail',compact('major','department'));
+    }
 }

@@ -14,7 +14,9 @@
             <div class="row justify-content-center" id="booth-list">
                 @if($department->slug == "computer-science")
                     <div class="col-12 col-lg-6">
-                        <img src="{{asset('images/booth/com-sci/computer.png')}}" alt="" class="img-fluid">
+                        <a href="{{route('booth.major',['slug'=>'1'])}}">
+                            <img src="{{asset('images/booth/com-sci/computer.png')}}" alt="" class="img-fluid">
+                        </a>
                     </div>
                     <div class="col-12 col-lg-6">
                         <img src="{{asset('images/booth/com-sci/data.png')}}" alt="" class="img-fluid">

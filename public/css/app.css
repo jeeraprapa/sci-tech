@@ -3,6 +3,31 @@ body {
   font-family: "Kanit", sans-serif;
 }
 
+@-webkit-keyframes wobble {
+  0%, 100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  15%, 45%, 75% {
+    transform: translateX(0px);
+  }
+  30%, 60% {
+    transform: translateX(-2px);
+  }
+}
+
+@keyframes wobble {
+  0%, 100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  15%, 45%, 75% {
+    transform: translateX(0px);
+  }
+  30%, 60% {
+    transform: translateX(-2px);
+  }
+}
 #main {
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -300,6 +325,35 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+}
+#booth #booth-item1 {
+  position: relative;
+}
+#booth #booth-item1 .btn {
+  position: absolute;
+  background: radial-gradient(50% 983.68% at 50% 50%, #b1b4af 0%, #484d46 100%);
+  border: solid 3px white;
+  color: white;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+}
+#booth #booth-item1 .btn:hover {
+  transform: scale(1.1);
+}
+#booth #booth-item1 #video {
+  top: 40%;
+  left: 14%;
+}
+#booth #booth-item1 #course {
+  top: 50%;
+}
+#booth #booth-item1 #teacher {
+  top: 40%;
+  right: 12%;
+}
+#booth #booth-item1 svg {
+  -webkit-animation: wobble 2s ease 0s infinite normal forwards;
+          animation: wobble 2s ease 0s infinite normal forwards;
 }
 
 #teacher header {

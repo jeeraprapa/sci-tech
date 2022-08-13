@@ -41,3 +41,15 @@
     @else if $screen == xlwide
         @media screen and (min-width: 2000px)
             @content
+
+@keyframes wobble
+    0%,
+    100%
+        transform: translateX(0%)
+        transform-origin: 50% 50%
+
+    15%,45%, 75%
+        transform: translateX(0px)
+
+    30%,60%
+        transform: translateX(-2px)
