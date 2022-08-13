@@ -68,12 +68,12 @@
     <script src="{{asset('vendor/lightgallery/js/lg-video.js')}}"></script>
     <script>
         $(document).ready(function (){
-            lightGallery(document.getElementById('posters'))
+            lightGallery(document.getElementById('lightgallery'))
             lightGallery(document.getElementById('video'));
         });
-        // function showGallery(page){
-        //     $("#lightgallery div:nth-child(" + page+ ")").trigger("click");
-        // }
+        function showGallery(){
+            $("#lightgallery div:nth-child(1)").trigger("click");
+        }
 
     </script>
 @endpush
