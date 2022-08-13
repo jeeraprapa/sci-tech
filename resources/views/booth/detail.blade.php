@@ -16,7 +16,9 @@
                 </h1>
             </header>
             <div class="row justify-content-center" id="booth-list">
+
                 @include('booth._item1')
+
             </div>
         </div>
     </section>

@@ -14,7 +14,7 @@
             <div class="row justify-content-center" id="booth-list">
                 @if($department->slug == "computer-science")
                     <div class="col-12 col-lg-6">
-                        <a href="{{route('booth.major',['slug'=>'1'])}}">
+                        <a href="{{route('booth.major',['department'=>$department->slug,'slug'=>'1'])}}">
                             <img src="{{asset('images/booth/com-sci/computer.png')}}" alt="" class="img-fluid">
                         </a>
                     </div>
@@ -26,8 +26,12 @@
                     </div>
                 @elseif($department->slug == "digital-technology")
                     <div class="col-12 col-lg-6">
-                        <img src="{{asset('images/booth/tech-digital/digital-sci.png')}}" alt=""
-                             class="img-fluid">
+                        <a href="{{route('booth.major',['department'=>$department->slug,'slug'=>'2'])}}">
+                            <img
+                                src="{{asset('images/booth/tech-digital/digital-sci.png')}}"
+                                alt=""
+                                class="img-fluid">
+                        </a>
                     </div>
                     <div class="col-12 col-lg-6">
                         <img src="{{asset('images/booth/tech-digital/it.png')}}" alt=""
@@ -35,13 +39,17 @@
                     </div>
                 @elseif($department->slug == "industrial-technology")
                     <div class="col-12 col-lg-6">
-                        <img src="{{asset('images/booth/manage-engineer.png')}}" alt=""
+                        <a href="{{route('booth.major',['department'=>$department->slug,'slug'=>'3'])}}">
+                            <img src="{{asset('images/booth/manage-engineer.png')}}" alt=""
                              class="img-fluid">
+                        </a>
                     </div>
                 @elseif($department->slug == "engineer-management-technology")
                     <div class="col-12 col-lg-6">
-                        <img src="{{asset('images/booth/ti/manage.png')}}" alt=""
+                        <a href="{{route('booth.major',['department'=>$department->slug,'slug'=>'4'])}}">
+                            <img src="{{asset('images/booth/ti/manage.png')}}" alt=""
                              class="img-fluid">
+                        </a>
                     </div>
                     <div class="col-12 col-lg-6">
                         <img src="{{asset('images/booth/ti/manufacturing.png')}}" alt=""
