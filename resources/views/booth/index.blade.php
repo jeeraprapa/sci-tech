@@ -12,50 +12,14 @@
                 </h1>
             </header>
             <div class="row justify-content-center" id="booth-list">
-                @if($department->slug == "computer-science")
+                @foreach($department->majors as $major)
                     <div class="col-12 col-lg-6">
-{{--                        <a href="{{route('booth.major',['department'=>$department->slug,'slug'=>'1'])}}">--}}
-                            <img src="{{asset('images/booth/com-sci/computer.png')}}" alt="" class="img-fluid">
-{{--                        </a>--}}
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <img src="{{asset('images/booth/com-sci/data.png')}}" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <img src="{{asset('images/booth/com-sci/it.png')}}" alt="" class="img-fluid">
-                    </div>
-                @elseif($department->slug == "digital-technology")
-                    <div class="col-12 col-lg-6">
-{{--                        <a href="{{route('booth.major',['department'=>$department->slug,'slug'=>'2'])}}">--}}
-                            <img
-                                src="{{asset('images/booth/tech-digital/digital-sci.png')}}"
-                                alt=""
-                                class="img-fluid">
-{{--                        </a>--}}
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <img src="{{asset('images/booth/tech-digital/it.png')}}" alt=""
+                        <a href="{{route('booth.major',['department'=>$department->slug,'slug'=>$major->slug])}}">
+                            <img src="{{$major->getMedia('img')->first()->getFullUrl()}}" alt="{{$department->name}} {{$major->name}}"
                              class="img-fluid">
+                        </a>
                     </div>
-                @elseif($department->slug == "industrial-technology")
-                    <div class="col-12 col-lg-6">
-{{--                        <a href="{{route('booth.major',['department'=>$department->slug,'slug'=>'3'])}}">--}}
-                            <img src="{{asset('images/booth/manage-engineer.png')}}" alt=""
-                             class="img-fluid">
-{{--                        </a>--}}
-                    </div>
-                @elseif($department->slug == "engineer-management-technology")
-                    <div class="col-12 col-lg-6">
-{{--                        <a href="{{route('booth.major',['department'=>$department->slug,'slug'=>'4'])}}">--}}
-                            <img src="{{asset('images/booth/ti/manage.png')}}" alt=""
-                             class="img-fluid">
-{{--                        </a>--}}
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <img src="{{asset('images/booth/ti/manufacturing.png')}}" alt=""
-                             class="img-fluid">
-                    </div>
-                @endif
+                @endforeach
             </div>
         </div>
     </section>

@@ -367,12 +367,12 @@ body {
     top: 50%;
   }
 }
-#booth #booth-item1 #teacher {
+#booth #booth-item1 #posters {
   top: 40%;
   right: 12%;
 }
 @media screen and (min-width: 992px) {
-  #booth #booth-item1 #teacher {
+  #booth #booth-item1 #posters {
     top: 40%;
     right: 12%;
   }
@@ -422,12 +422,12 @@ body {
     top: 73%;
   }
 }
-#booth #booth-item2 #teacher {
+#booth #booth-item2 #posters {
   top: 60%;
   right: 17%;
 }
 @media screen and (min-width: 992px) {
-  #booth #booth-item2 #teacher {
+  #booth #booth-item2 #posters {
     top: 60%;
     right: 17%;
   }
@@ -487,12 +487,12 @@ body {
     left: 15%;
   }
 }
-#booth #booth-item3 #teacher {
+#booth #booth-item3 #posters {
   top: 62%;
   right: 27%;
 }
 @media screen and (min-width: 992px) {
-  #booth #booth-item3 #teacher {
+  #booth #booth-item3 #posters {
     top: 65%;
     right: 30%;
   }
@@ -552,12 +552,12 @@ body {
     left: 45%;
   }
 }
-#booth #booth-item4 #teacher {
+#booth #booth-item4 #posters {
   top: 55%;
   right: 78%;
 }
 @media screen and (min-width: 992px) {
-  #booth #booth-item4 #teacher {
+  #booth #booth-item4 #posters {
     top: 55%;
     right: 70%;
   }

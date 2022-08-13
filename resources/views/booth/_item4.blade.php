@@ -1,5 +1,5 @@
-<div class="col-12 col-lg-6" id="booth-item4">
-    <img src="{{asset('images/booth/ti/manage.png')}}" alt="" class="img-fluid">
+<div class="col-12 col-lg-8" id="booth-item4">
+    <img src="{{$major->getMedia('img')->first()->getFullUrl()}}" alt="{{$department->name}} {{$major->name}}" class="w-100">
     <button class="booth-search btn" id="video">
         <div data-src="https://www.youtube.com/watch?v=Vi6PtgIDjcY" class="d-flex align-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
