@@ -58,7 +58,7 @@
                                             </li>
                                             <li>
                                                 <a class="dropdown-item" href="{{ route('admin.major.media', ['major' => $value->id]) }}">
-                                                    <i class="fas fa-image text-dark me-2" aria-hidden="true"></i> รูปภาพ
+                                                    <i class="fas fa-image text-dark me-2" aria-hidden="true"></i> ข่าวสาร
                                                 </a>
                                             </li>
                                         </ul>

@@ -22,4 +22,9 @@ class Department extends Model
         return $this->hasMany(Teacher::class,'department_id');
     }
 
+    public function majors ()
+    {
+        return $this->hasMany(Major::class,'department_id');
+    }
+
 }
