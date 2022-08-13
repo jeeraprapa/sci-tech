@@ -39,6 +39,7 @@
             justify-content: center
     #posters
         cursor: pointer
+        display: inline !important
     #booth-item1,
     #booth-item2,
     #booth-item3,
@@ -47,23 +48,29 @@
         .btn
             position: absolute
             background: radial-gradient(50% 983.68% at 50% 50%, #b1b4af 0%, #484d46 100%)
-            border: solid 3px white
+            border: solid 2px white
             color: white
-            border-radius: 20px
+            border-radius: 45px
             transition: all 0.4s ease
             &:hover
                 transform: scale(1.1)
-            font-size: 0.7rem
+            font-size: 0.6rem
             padding: 0.25rem 0.45rem
             @include screen('md')
                 border: solid 3px white
-                font-size: 1rem
+                font-size: 1.25rem
                 padding: .375rem 0.75rem
 
             svg
                 animation: wobble 2s ease 0s infinite normal forwards
                 width: 9px
                 height: 9px
+                @include screen('sm')
+                    width: 16px
+                    height: 16px
+                @include screen('md')
+                    width: 16px
+                    height: 16px
                 @include screen('lg')
                     width: 16px
                     height: 16px
@@ -71,37 +78,69 @@
         #video
             top: 40%
             left: 14%
+            @include screen('sm')
+                top: 40%
+                left: 14%
+            @include screen('md')
+                top: 40%
+                left: 14%
             @include screen('lg')
                 top: 40%
                 left: 14%
         #course
-            top: 50%
+            top: 61%
+            @include screen('sm')
+                top: 61%
+            @include screen('md')
+                top: 62%
             @include screen('lg')
-                top: 50%
+                top: 62%
         #posters
             top: 40%
             right: 12%
+            @include screen('sm')
+                top: 41%
+                right: 12%
+            @include screen('md')
+                top: 42%
+                right: 12%
             @include screen('lg')
-                top: 40%
+                top: 45%
                 right: 12%
 
     #booth-item2
         #video
             top: 45%
-            left: 20%
+            right: 20%
+            @include screen('sm')
+                top: 45%
+                right: 20%
+            @include screen('md')
+                top: 45%
+                right: 20%
             @include screen('lg')
                 top: 45%
-                left: 20%
+                right: 20%
         #course
-            top: 73%
+            top: 70%
+            @include screen('sm')
+                top: 72%
+            @include screen('md')
+                top: 72%
             @include screen('lg')
-                top: 73%
+                top: 72%
         #posters
-            top: 60%
-            right: 17%
+            top: 45%
+            left: 18%
+            @include screen('sm')
+                top: 61%
+                left: 17%
+            @include screen('md')
+                top: 45%
+                left: 17%
             @include screen('lg')
-                top: 60%
-                right: 17%
+                top: 45%
+                left: 22%
 
     #booth-item3
         #video
@@ -131,17 +170,23 @@
                 top: 57%
                 left: 67%
         #course
-            top: 30%
-            left: 45%
+            top: 23%
+            left: 52%
+            @include screen('sm')
+                top: 24%
+                left: 52%
             @include screen('lg')
-                top: 30%
-                left: 45%
+                top: 25%
+                left: 55%
         #posters
-            top: 55%
-            right: 78%
+            top: 34%
+            right: 71%
+            @include screen('sm')
+                top: 34%
+                right: 72%
             @include screen('lg')
-                top: 55%
-                right: 70%
+                top: 35%
+                right: 76%
 
     .header-booth-detail
         text-align: center

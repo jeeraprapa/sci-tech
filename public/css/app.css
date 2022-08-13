@@ -328,6 +328,7 @@ body {
 }
 #booth #posters {
   cursor: pointer;
+  display: inline !important;
 }
 #booth #booth-item1,
 #booth #booth-item2,
@@ -341,11 +342,11 @@ body {
 #booth #booth-item4 .btn {
   position: absolute;
   background: radial-gradient(50% 983.68% at 50% 50%, #b1b4af 0%, #484d46 100%);
-  border: solid 3px white;
+  border: solid 2px white;
   color: white;
-  border-radius: 20px;
+  border-radius: 45px;
   transition: all 0.4s ease;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   padding: 0.25rem 0.45rem;
 }
 #booth #booth-item1 .btn:hover,
@@ -360,7 +361,7 @@ body {
 #booth #booth-item3 .btn,
 #booth #booth-item4 .btn {
     border: solid 3px white;
-    font-size: 1rem;
+    font-size: 1.25rem;
     padding: 0.375rem 0.75rem;
   }
 }
@@ -372,6 +373,24 @@ body {
           animation: wobble 2s ease 0s infinite normal forwards;
   width: 9px;
   height: 9px;
+}
+@media screen and (min-width: 576px) {
+  #booth #booth-item1 .btn svg,
+#booth #booth-item2 .btn svg,
+#booth #booth-item3 .btn svg,
+#booth #booth-item4 .btn svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #booth #booth-item1 .btn svg,
+#booth #booth-item2 .btn svg,
+#booth #booth-item3 .btn svg,
+#booth #booth-item4 .btn svg {
+    width: 16px;
+    height: 16px;
+  }
 }
 @media screen and (min-width: 992px) {
   #booth #booth-item1 .btn svg,
@@ -386,6 +405,18 @@ body {
   top: 40%;
   left: 14%;
 }
+@media screen and (min-width: 576px) {
+  #booth #booth-item1 #video {
+    top: 40%;
+    left: 14%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #booth #booth-item1 #video {
+    top: 40%;
+    left: 14%;
+  }
+}
 @media screen and (min-width: 992px) {
   #booth #booth-item1 #video {
     top: 40%;
@@ -393,49 +424,105 @@ body {
   }
 }
 #booth #booth-item1 #course {
-  top: 50%;
+  top: 61%;
+}
+@media screen and (min-width: 576px) {
+  #booth #booth-item1 #course {
+    top: 61%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #booth #booth-item1 #course {
+    top: 62%;
+  }
 }
 @media screen and (min-width: 992px) {
   #booth #booth-item1 #course {
-    top: 50%;
+    top: 62%;
   }
 }
 #booth #booth-item1 #posters {
   top: 40%;
   right: 12%;
 }
+@media screen and (min-width: 576px) {
+  #booth #booth-item1 #posters {
+    top: 41%;
+    right: 12%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #booth #booth-item1 #posters {
+    top: 42%;
+    right: 12%;
+  }
+}
 @media screen and (min-width: 992px) {
   #booth #booth-item1 #posters {
-    top: 40%;
+    top: 45%;
     right: 12%;
   }
 }
 #booth #booth-item2 #video {
   top: 45%;
-  left: 20%;
+  right: 20%;
+}
+@media screen and (min-width: 576px) {
+  #booth #booth-item2 #video {
+    top: 45%;
+    right: 20%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #booth #booth-item2 #video {
+    top: 45%;
+    right: 20%;
+  }
 }
 @media screen and (min-width: 992px) {
   #booth #booth-item2 #video {
     top: 45%;
-    left: 20%;
+    right: 20%;
   }
 }
 #booth #booth-item2 #course {
-  top: 73%;
+  top: 70%;
+}
+@media screen and (min-width: 576px) {
+  #booth #booth-item2 #course {
+    top: 72%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #booth #booth-item2 #course {
+    top: 72%;
+  }
 }
 @media screen and (min-width: 992px) {
   #booth #booth-item2 #course {
-    top: 73%;
+    top: 72%;
   }
 }
 #booth #booth-item2 #posters {
-  top: 60%;
-  right: 17%;
+  top: 45%;
+  left: 18%;
+}
+@media screen and (min-width: 576px) {
+  #booth #booth-item2 #posters {
+    top: 61%;
+    left: 17%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #booth #booth-item2 #posters {
+    top: 45%;
+    left: 17%;
+  }
 }
 @media screen and (min-width: 992px) {
   #booth #booth-item2 #posters {
-    top: 60%;
-    right: 17%;
+    top: 45%;
+    left: 22%;
   }
 }
 #booth #booth-item3 #video {
@@ -479,23 +566,35 @@ body {
   }
 }
 #booth #booth-item4 #course {
-  top: 30%;
-  left: 45%;
+  top: 23%;
+  left: 52%;
+}
+@media screen and (min-width: 576px) {
+  #booth #booth-item4 #course {
+    top: 24%;
+    left: 52%;
+  }
 }
 @media screen and (min-width: 992px) {
   #booth #booth-item4 #course {
-    top: 30%;
-    left: 45%;
+    top: 25%;
+    left: 55%;
   }
 }
 #booth #booth-item4 #posters {
-  top: 55%;
-  right: 78%;
+  top: 34%;
+  right: 71%;
+}
+@media screen and (min-width: 576px) {
+  #booth #booth-item4 #posters {
+    top: 34%;
+    right: 72%;
+  }
 }
 @media screen and (min-width: 992px) {
   #booth #booth-item4 #posters {
-    top: 55%;
-    right: 70%;
+    top: 35%;
+    right: 76%;
   }
 }
 #booth .header-booth-detail {
