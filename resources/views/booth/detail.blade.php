@@ -7,14 +7,22 @@
 @section('content')
     <section id="booth">
         <div class="container-fluid">
-            <header>
+            <header class="header-booth-detail">
                 <h1>
-                    {{$department->name}}
-                    <span>
                     {{$department->type}}
-                </span>
                 </h1>
+                <nav>
+                    <a href="{{route('booth.major',['department'=>$department->slug,'slug'=>$major->slug])}}" class="{{$next ? '' : 'border-right'}}">
+                        <h2>{{$major->name}}</h2>
+                    </a>
+                    @if($next)
+                        <a href="{{route('booth.major',['department'=>$department->slug,'slug'=>$next->slug])}}">
+                            <h2>{{$next->name}}</h2>
+                        </a>
+                    @endif
+                </nav>
             </header>
+
             <div class="row justify-content-center" id="booth-list">
                 @if($department->slug == "computer-science")
                     @include('booth._item',['booth_id'=>'booth-item1'])
@@ -42,7 +50,7 @@
                     </div>
 
                     <div class="text-detail">
-                        <h1 class="h3 pb-3">{{$major->name}}</h1>
+                        <h3 class="h3 pb-3">{{$major->name}}</h3>
                         {!! $major->detail !!}
                     </div>
                 </div>
@@ -60,7 +68,7 @@
     <script src="{{asset('vendor/lightgallery/js/lg-video.js')}}"></script>
     <script>
         $(document).ready(function (){
-            // lightGallery(document.getElementById('posters'))
+            lightGallery(document.getElementById('posters'))
             lightGallery(document.getElementById('video'));
         });
         // function showGallery(page){

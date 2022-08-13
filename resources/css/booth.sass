@@ -9,7 +9,7 @@
     @include screen('lg')
         margin-top: -70px
         padding-top: 120px
-    header
+    .header
         background: radial-gradient(50% 983.68% at 50% 50%, #FDC12D 0%, #D49B48 100%)
         border-radius: 30px
         width: fit-content
@@ -37,7 +37,12 @@
             display: flex
             align-items: flex-end
             justify-content: center
-    #booth-item1
+    #posters
+        cursor: pointer
+    #booth-item1,
+    #booth-item2,
+    #booth-item3,
+    #booth-item4
         position: relative
         .btn
             position: absolute
@@ -54,6 +59,15 @@
                 border: solid 3px white
                 font-size: 1rem
                 padding: .375rem 0.75rem
+
+            svg
+                animation: wobble 2s ease 0s infinite normal forwards
+                width: 9px
+                height: 9px
+                @include screen('lg')
+                    width: 16px
+                    height: 16px
+    #booth-item1
         #video
             top: 40%
             left: 14%
@@ -70,26 +84,8 @@
             @include screen('lg')
                 top: 40%
                 right: 12%
-        svg
-            animation: wobble 2s ease 0s infinite normal forwards
 
     #booth-item2
-        position: relative
-        .btn
-            position: absolute
-            background: radial-gradient(50% 983.68% at 50% 50%, #b1b4af 0%, #484d46 100%)
-            border: solid 2px white
-            color: white
-            border-radius: 20px
-            transition: all 0.4s ease
-            &:hover
-                transform: scale(1.1)
-            font-size: 0.7rem
-            padding: 0.25rem 0.45rem
-            @include screen('md')
-                border: solid 3px white
-                font-size: 1rem
-                padding: .375rem 0.75rem
         #video
             top: 45%
             left: 20%
@@ -106,31 +102,8 @@
             @include screen('lg')
                 top: 60%
                 right: 17%
-        svg
-            animation: wobble 2s ease 0s infinite normal forwards
-            width: 9px
-            height: 9px
-            @include screen('lg')
-                width: 16px
-                height: 16px
 
     #booth-item3
-        position: relative
-        .btn
-            position: absolute
-            background: radial-gradient(50% 983.68% at 50% 50%, #b1b4af 0%, #484d46 100%)
-            border: solid 2px white
-            color: white
-            border-radius: 20px
-            transition: all 0.4s ease
-            &:hover
-                transform: scale(1.1)
-            font-size: 0.7rem
-            padding: 0.25rem 0.45rem
-            @include screen('md')
-                border: solid 3px white
-                font-size: 1rem
-                padding: .375rem 0.75rem
         #video
             top: 38%
             left: 43%
@@ -149,31 +122,8 @@
             @include screen('lg')
                 top: 65%
                 right: 30%
-        svg
-            animation: wobble 2s ease 0s infinite normal forwards
-            width: 9px
-            height: 9px
-            @include screen('lg')
-                width: 16px
-                height: 16px
 
     #booth-item4
-        position: relative
-        .btn
-            position: absolute
-            background: radial-gradient(50% 983.68% at 50% 50%, #b1b4af 0%, #484d46 100%)
-            border: solid 2px white
-            color: white
-            border-radius: 20px
-            transition: all 0.4s ease
-            &:hover
-                transform: scale(1.1)
-            font-size: 0.7rem
-            padding: 0.25rem 0.45rem
-            @include screen('md')
-                border: solid 3px white
-                font-size: 1rem
-                padding: .375rem 0.75rem
         #video
             top: 57%
             left: 78%
@@ -192,10 +142,39 @@
             @include screen('lg')
                 top: 55%
                 right: 70%
-        svg
-            animation: wobble 2s ease 0s infinite normal forwards
-            width: 9px
-            height: 9px
-            @include screen('lg')
-                width: 16px
-                height: 16px
+
+    .header-booth-detail
+        text-align: center
+        h1
+            font-weight: 600
+            font-size: 34px
+            color: #C97A1B
+            position: relative
+            @include stroke(2, #fff)
+        nav
+            margin-top: -28px
+            display: flex
+            justify-content: center
+            a
+                text-decoration: none
+                color: white
+                border: 3px solid #FFFFFF
+                padding: 18px 24px
+                h2
+                    margin: 0
+                    font-weight: 500
+                    font-size: 18px
+                    line-height: 27px
+                &.border-right
+                    border-radius: 131px !important
+                &:last-child
+                    background: #DBDBDB
+                    border-radius: 0px 131px 131px 0px
+                &:first-child
+                    background: linear-gradient(264.78deg, #628D00 51.9%, #C7FA52 120.27%)
+                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25)
+                    border-radius: 131px 0 0 131px
+
+
+
+

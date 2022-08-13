@@ -17,11 +17,24 @@ class BoothController
 
     public function major ($department,$slug)
     {
-        $major = Major::where('slug', $slug)->firstOrFail();
+        $major = Major::where('slug', $slug)
+                      ->firstOrFail();
 
-        $department = Department::where('slug', $department)->firstOrFail();
+        $department = Department::where('slug', $department)
+                                ->firstOrFail();
 
-        return view('booth.detail',compact('department','major'));
+        $next = Major::where('department_id', $department->id)
+                     ->where('id', '>', $major->id)
+                     ->orderBy('id')->first();
+
+        if (empty($next)) {
+            $next = Major::where('department_id', $department->id)
+                         ->where('id', '!=', $major->id)
+                         ->orderBy('id')->first();
+        }
+
+
+        return view('booth.detail',compact('department','major','next'));
 
     }
 }

@@ -3,7 +3,7 @@
 @section('content')
     <section id="booth">
         <div class="container-fluid">
-            <header>
+            <header class="header">
                 <h1>
                     {{$department->name}}
                     <span>
