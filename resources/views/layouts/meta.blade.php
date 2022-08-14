@@ -20,7 +20,10 @@
 <link rel="icon" href="{{asset('images/logo.png')}}" type="image/x-icon">
 <link href="{{asset('vendors/css/bootstrap.min.css')}}" rel="stylesheet">
 <link href="{{mix('css/app.css')}}" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('vendor/fakerLoader/fakeLoader.min.css') }}">
 
+<script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+<script src="{{ asset('vendor/fakerLoader/fakeLoader.min.js')}}"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HWW0XZWSDY"></script>
 <script>

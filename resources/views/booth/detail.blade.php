@@ -65,7 +65,6 @@
 @endsection
 
 @push('js')
-    <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('vendor/lightgallery/js/lightgallery.js')}}"></script>
     <script src="{{asset('vendor/lightgallery/js/lg-fullscreen.js')}}"></script>
     <script src="{{asset('vendor/lightgallery/js/lg-zoom.js')}}"></script>

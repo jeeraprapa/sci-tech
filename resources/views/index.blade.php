@@ -4,6 +4,12 @@
     @include('layouts.meta')
 </head>
 <body>
+    <div class="fakeLoader"></div>
+    <script>
+        $.fakeLoader({
+            bgColor: '#98cc77'
+        });
+    </script>
     <div class="wrapper">
         <header class="position-fixed m-5">
             <img src="{{asset('images/index/logo.png')}}" alt="">
@@ -33,5 +39,4 @@
     </div>
 </body>
 <script src="{{asset('vendors/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('vendors/js/bootstrap.bundle.min.js')}}"></script>
 </html>

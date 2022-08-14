@@ -4,6 +4,12 @@
     @include('layouts.meta',['title'=>'นิทรรศการ “การเรียนรู้สาขาวิชาวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยสุโขทัยธรรมาธิราช”'])
 </head>
 <body>
+    <div class="fakeLoader"></div>
+    <script>
+        $.fakeLoader({
+            bgColor: '#98cc77'
+        });
+    </script>
     <div class="wrapper" id="second">
         <header>
             <div class="d-lg-none header-small">
