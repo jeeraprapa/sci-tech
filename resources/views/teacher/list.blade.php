@@ -26,16 +26,16 @@
                     <div class="modal-body">
                         <div class="text-header">
                             <div class="title">
-                                <div class="text-title" id="exampleModalLabel">ข้อมูลอาจารย์</div>
+                                <div class="text-title p-3" id="exampleModalLabel">ข้อมูลอาจารย์</div>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                         </div>
-                        <div class="row py-3">
-                            <div class="col-sm-12 col-md-3 text-center">
+                        <div class="row p-3">
+                            <div class="col-sm-12 col-md-4 text-center">
                                 <img src="{{$teacher->getMedia('img')->first()->getFullUrl()}}" alt="" class="img-fluid px-5 p-md-0">
                                 <p class="py-3">{{$teacher->name}}</p>
                             </div>
-                            <div class="col-sm-12 col-md-9">
+                            <div class="col-sm-12 col-md-8">
                                 <div class="row lh-lg">
                                     <div class="col-4 text-success"> แขนงวิชา : </div>
                                     <div class="col-8 text-detail"> {{$department->name}} </div>
