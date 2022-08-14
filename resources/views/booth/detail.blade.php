@@ -11,7 +11,7 @@
                 <h1>
                     {{$department->type}}
                 </h1>
-                <nav>
+                <nav class="d-none d-lg-flex">
                     <a href="{{route('booth.major',['department'=>$department->slug,'slug'=>$major->slug])}}" class="{{$next ? '' : 'border-right'}}">
                         <h2>{{$major->name}}</h2>
                     </a>
@@ -20,6 +20,11 @@
                             <h2>{{$next->name}}</h2>
                         </a>
                     @endif
+                </nav>
+                <nav class=" d-lg-none">
+                    <a href="{{route('booth.major',['department'=>$department->slug,'slug'=>$major->slug])}}" class="border-right">
+                        <h2>{{$major->name}}</h2>
+                    </a>
                 </nav>
             </header>
 
