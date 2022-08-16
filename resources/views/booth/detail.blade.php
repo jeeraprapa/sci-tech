@@ -1,4 +1,4 @@
-@extends('layouts.base',['title'=>$department->name])
+@extends('layouts.base',['title'=>$major->name])
 
 @push('css')
     <link href="{{asset('vendor/lightgallery/dist/css/lightgallery.css')}}" rel="stylesheet">
