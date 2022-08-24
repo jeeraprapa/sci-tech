@@ -27,9 +27,26 @@
         <div class="form-group">
             {{ Form::label('img', 'ภาพบูธ', array('class' => 'required')) }}
             {{ Form::file('img', null, ['class' => 'form-control']) }}
-            @if(!empty($major))
+            @if(!empty($major) and $major->getMedia('img')->count())
+                <br>
                 <img src="{{$major->getMedia('img')->first()->getFullUrl()}}" alt="" class="img-thumbnail">
             @endif
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group">
+            {{ Form::label('thumbnail', 'โปสเตอร์พรีวิว', array('class' => 'required')) }}
+            {{ Form::file('thumbnail', null, ['class' => 'form-control']) }}
+            @if(!empty($major) and $major->getMedia('thumbnail')->count())
+                <br>
+                <img src="{{$major->getMedia('thumbnail')->first()->getFullUrl()}}" alt="" class="img-thumbnail">
+            @endif
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="form-group">
+            {{ Form::label('full_name', 'ชื่อปริญญาและสาขาวิชา', array('class' => 'required')) }}
+            {{ Form::textarea('full_name', null, ['class' => 'form-control editor']) }}
         </div>
     </div>
     <div class="col-12">

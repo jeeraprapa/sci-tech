@@ -19,6 +19,7 @@ class Teacher extends Model implements HasMedia
     protected $fillable = [
         'department_id',
         'name',
+        'weight',
         'email',
         'tel',
         'education',
@@ -42,6 +43,11 @@ class Teacher extends Model implements HasMedia
     function youtube_image($id) {
 
         return "http://img.youtube.com/vi/$id/mqdefault.jpg";
+    }
+
+    public function scopeHeavier ($q)
+    {
+        return $q->orderBy('weight','desc');
     }
 
 }

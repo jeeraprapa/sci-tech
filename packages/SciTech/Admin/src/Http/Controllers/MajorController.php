@@ -42,6 +42,12 @@ class MajorController extends Controller
                     ->toMediaCollection('img');
         }
 
+        if($request->hasFile('thumbnail') && $request->file('thumbnail')->isValid()) {
+            $major->clearMediaCollection('thumbnail');
+            $major->addMediaFromRequest('thumbnail')
+                    ->toMediaCollection('thumbnail');
+        }
+
 
         $request->session()->flash('status', 'success');
         $request->session()->flash('message', 'ดำเนินการสำเร็จ');
@@ -73,6 +79,12 @@ class MajorController extends Controller
             $major->clearMediaCollection('img');
             $major->addMediaFromRequest('img')
                     ->toMediaCollection('img');
+        }
+
+        if($request->hasFile('thumbnail') && $request->file('thumbnail')->isValid()) {
+            $major->clearMediaCollection('thumbnail');
+            $major->addMediaFromRequest('thumbnail')
+                    ->toMediaCollection('thumbnail');
         }
 
         $request->session()->flash('status', 'success');

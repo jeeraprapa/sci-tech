@@ -19,7 +19,7 @@ class Department extends Model
 
     public function teachers ()
     {
-        return $this->hasMany(Teacher::class,'department_id');
+        return $this->hasMany(Teacher::class,'department_id')->heavier();
     }
 
     public function majors ()

@@ -29,10 +29,16 @@
             {{ Form::textarea('education', null, ['class' => 'form-control','size'=>'x3']) }}
         </div>
     </div>
-    <div class="col-12">
+    <div class="col-6">
         <div class="form-group">
             {{ Form::label('youtube_url', 'Youtube Link', array('class' => 'required')) }}
             {{ Form::text('youtube_url', null, ['class' => 'form-control']) }}
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group">
+            {{ Form::label('weight', 'Weight (เรียงลำดับการมากไปน้อย)') }}
+            {{ Form::number('weight', null, ['class' => 'form-control']) }}
         </div>
     </div>
     <div class="col-12">

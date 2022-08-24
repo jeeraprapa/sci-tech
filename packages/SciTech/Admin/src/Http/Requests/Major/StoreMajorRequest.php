@@ -28,6 +28,7 @@ class StoreMajorRequest extends FormRequest
             'name' => 'required|max:255',
             'department_id' => 'required',
             'img' => 'required|image',
+            'thumbnail' => 'required|image',
             'slug' => ['required', 'max:255', 'regex:/^[a-zA-Z0-9_-]+$/u', Rule::unique('majors')->whereNull('deleted_at')->ignore($this->id)],
         ];
     }
