@@ -33,6 +33,8 @@ class MajorController extends Controller
 
         $editor = new Editor();
         $data['detail'] = $editor->uploadImage($data['detail']);
+        $data['video'] = $editor->uploadImage($data['video']);
+        $data['full_name'] = $editor->uploadImage($data['full_name']);
 
         $major = Major::create($data);
 
@@ -72,6 +74,8 @@ class MajorController extends Controller
 
         $editor = new Editor();
         $data['detail'] = $editor->uploadImage($data['detail']);
+        $data['video'] = $editor->uploadImage($data['video']);
+        $data['full_name'] = $editor->uploadImage($data['full_name']);
 
         $major->fill($data)->saveOrFail();
 

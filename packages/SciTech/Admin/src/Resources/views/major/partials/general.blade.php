@@ -55,6 +55,12 @@
             {{ Form::textarea('detail', null, ['class' => 'form-control editor']) }}
         </div>
     </div>
+    <div class="col-12">
+        <div class="form-group">
+            {{ Form::label('video', 'video แนะนำหลักสูตร', array('class' => 'required')) }}
+            {{ Form::textarea('video', null, ['class' => 'form-control editor']) }}
+        </div>
+    </div>
 </div>
 {{ Form::submit('บันทึก', ['class' => 'btn btn-primary']) }}
 <a href="{{ route('admin.major.index') }}" class="btn btn-secondary">ย้อนกลับ</a>
