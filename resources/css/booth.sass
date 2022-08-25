@@ -7,6 +7,7 @@
     margin-top: -20px
     padding-top: 50px
     @include screen('lg')
+        overflow: hidden
         margin-top: -70px
         padding-top: 120px
     .header
@@ -45,6 +46,12 @@
     #booth-item3,
     #booth-item4
         position: relative
+        .booth-name
+            font-weight: 600
+            font-size: 18px
+            @include stroke(2, #fff)
+            position: absolute
+            padding: 0 1rem
         .btn
             position: absolute
             background: radial-gradient(50% 983.68% at 50% 50%, #b1b4af 0%, #484d46 100%)
@@ -75,6 +82,16 @@
                     width: 16px
                     height: 16px
     #booth-item1
+        .booth-name
+            top: 100%
+            padding: 0 2rem
+            @include screen('md')
+                top: 20%
+                left: 0
+                right: 0
+                margin-left: auto
+                margin-right: auto
+                width: 100%
         #thumbnail
             position: absolute
             top: 30%
@@ -140,6 +157,12 @@
                 left: 4%
 
     #booth-item2
+        .booth-name
+            top: 100%
+            padding: 0 2rem
+            @include screen('md')
+                top: 20%
+                left: 20%
         #thumbnail
             position: absolute
             top: 50%
@@ -208,6 +231,16 @@
                 right: 15%
 
     #booth-item3
+        .booth-name
+            top: 100%
+            padding: 0 2rem
+            @include screen('md')
+                top: 20%
+                left: 0
+                right: 0
+                margin-left: auto
+                margin-right: auto
+                width: 100%
         #thumbnail
             position: absolute
             top: 65%
@@ -262,6 +295,11 @@
                 right: 5%
 
     #booth-item4
+        .booth-name
+            bottom: -6rem
+            padding: 2rem
+            @include screen('md')
+                bottom: -3rem
         #thumbnail
             position: absolute
             top: 55%

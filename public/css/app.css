@@ -336,6 +336,16 @@ body {
 #booth #booth-item4 {
   position: relative;
 }
+#booth #booth-item1 .booth-name,
+#booth #booth-item2 .booth-name,
+#booth #booth-item3 .booth-name,
+#booth #booth-item4 .booth-name {
+  font-weight: 600;
+  font-size: 18px;
+  text-shadow: -2px -2px 0 #fff, -2px -1px 0 #fff, -2px 0px 0 #fff, -2px 1px 0 #fff, -2px 2px 0 #fff, -1px -2px 0 #fff, -1px -1px 0 #fff, -1px 0px 0 #fff, -1px 1px 0 #fff, -1px 2px 0 #fff, 0px -2px 0 #fff, 0px -1px 0 #fff, 0px 0px 0 #fff, 0px 1px 0 #fff, 0px 2px 0 #fff, 1px -2px 0 #fff, 1px -1px 0 #fff, 1px 0px 0 #fff, 1px 1px 0 #fff, 1px 2px 0 #fff, 2px -2px 0 #fff, 2px -1px 0 #fff, 2px 0px 0 #fff, 2px 1px 0 #fff, 2px 2px 0 #fff;
+  position: absolute;
+  padding: 0 1rem;
+}
 #booth #booth-item1 .btn,
 #booth #booth-item2 .btn,
 #booth #booth-item3 .btn,
@@ -399,6 +409,20 @@ body {
 #booth #booth-item4 .btn svg {
     width: 16px;
     height: 16px;
+  }
+}
+#booth #booth-item1 .booth-name {
+  top: 100%;
+  padding: 0 2rem;
+}
+@media screen and (min-width: 768px) {
+  #booth #booth-item1 .booth-name {
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
   }
 }
 #booth #booth-item1 #thumbnail {
@@ -513,6 +537,16 @@ body {
     font-size: 1rem;
     top: 48%;
     left: 4%;
+  }
+}
+#booth #booth-item2 .booth-name {
+  top: 100%;
+  padding: 0 2rem;
+}
+@media screen and (min-width: 768px) {
+  #booth #booth-item2 .booth-name {
+    top: 20%;
+    left: 20%;
   }
 }
 #booth #booth-item2 #thumbnail {
@@ -641,6 +675,20 @@ body {
     right: 15%;
   }
 }
+#booth #booth-item3 .booth-name {
+  top: 100%;
+  padding: 0 2rem;
+}
+@media screen and (min-width: 768px) {
+  #booth #booth-item3 .booth-name {
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
 #booth #booth-item3 #thumbnail {
   position: absolute;
   top: 65%;
@@ -732,6 +780,15 @@ body {
     font-size: 1rem;
     top: 80%;
     right: 5%;
+  }
+}
+#booth #booth-item4 .booth-name {
+  bottom: -6rem;
+  padding: 2rem;
+}
+@media screen and (min-width: 768px) {
+  #booth #booth-item4 .booth-name {
+    bottom: -3rem;
   }
 }
 #booth #booth-item4 #thumbnail {
