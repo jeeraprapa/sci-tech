@@ -84,7 +84,13 @@
             margin-right: auto
             width: 100px
             img
-                height: 150px
+                height: 55px
+                @include screen('sm')
+                    height: 115px
+                @include screen('md')
+                    height: 115px
+                @include screen('lg')
+                    height: 190px
         #video
             top: 40%
             right: 11%
@@ -98,25 +104,25 @@
                 top: 40%
                 right: 10%
         #course
-            top: 61%
+            top: 62%
             @include screen('sm')
-                top: 61%
-            @include screen('md')
-                top: 65%
-            @include screen('lg')
                 top: 62%
+            @include screen('md')
+                top: 63%
+            @include screen('lg')
+                top: 63%
         #posters
             top: 35%
-            right: 43%
+            right: 42%
             @include screen('sm')
                 top: 35%
-                right: 43%
+                right: 42%
             @include screen('md')
                 top: 35%
                 right: 43%
             @include screen('lg')
-                top: 34%
-                right: 43%
+                top: 35%
+                right: 45%
         #name
             font-size: 0.6rem
             top: 48%
@@ -136,14 +142,23 @@
     #booth-item2
         #thumbnail
             position: absolute
-            top: 30%
+            top: 50%
             left: 0
-            right: 0
-            margin-left: auto
-            margin-right: auto
-            width: 100px
+            right: 45%
+            @include screen('sm')
+                right: 45%
+            @include screen('md')
+                right: 46%
+            @include screen('lg')
+                right: 47%
             img
-                height: 150px
+                height: 45px
+                @include screen('sm')
+                    height: 55px
+                @include screen('md')
+                    height: 90px
+                @include screen('lg')
+                    height: 145px
         #video
             top: 45%
             right: 20%
@@ -195,14 +210,22 @@
     #booth-item3
         #thumbnail
             position: absolute
-            top: 30%
-            left: 0
-            right: 0
-            margin-left: auto
-            margin-right: auto
-            width: 100px
+            top: 65%
+            left: 61%
+            @include screen('sm')
+                left: 45%
+            @include screen('md')
+                left: 62%
+            @include screen('lg')
+                left: 62%
             img
-                height: 150px
+                height: 30px
+                @include screen('sm')
+                    height: 55px
+                @include screen('md')
+                    height: 55px
+                @include screen('lg')
+                    height: 80px
         #video
             top: 38%
             left: 43%
@@ -216,11 +239,11 @@
                 top: 70%
                 left: 15%
         #posters
-            top: 62%
+            top: 58%
             right: 27%
             @include screen('lg')
-                top: 65%
-                right: 30%
+                top: 60%
+                right: 31%
 
         #name
             font-size: 0.6rem
@@ -241,32 +264,41 @@
     #booth-item4
         #thumbnail
             position: absolute
-            top: 30%
+            top: 55%
             left: 0
-            right: 0
-            margin-left: auto
-            margin-right: auto
-            width: 100px
+            right: 58%
+            @include screen('sm')
+                right: 45%
+            @include screen('md')
+                right: 60%
+            @include screen('lg')
+                right: 60%
             img
-                height: 150px
+                height: 65px
+                @include screen('sm')
+                    height: 55px
+                @include screen('md')
+                    height: 145px
+                @include screen('lg')
+                    height: 240px
         #video
             top: 57%
-            left: 70%
+            left: 72%
             @include screen('sm')
                 top: 55%
                 left: 74%
             @include screen('lg')
                 top: 55%
-                left: 73%
+                left: 76%
         #course
             top: 35%
-            left: 50%
+            left: 51%
             @include screen('sm')
                 top: 35%
                 left: 53%
             @include screen('lg')
                 top: 35%
-                left: 51%
+                left: 55%
         #posters
             top: 50%
             right: 72%
@@ -274,8 +306,8 @@
                 top: 50%
                 right: 73%
             @include screen('lg')
-                top: 50%
-                right: 73%
+                top: 45%
+                right: 76%
 
         #name
             font-size: 0.6rem
@@ -291,7 +323,7 @@
             @include screen('lg')
                 font-size: 1rem
                 top: 30%
-                right: 0%
+                right: 8%
     .header-booth-detail
         text-align: center
         h1
