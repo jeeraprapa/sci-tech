@@ -34,9 +34,9 @@
                 @elseif($department->slug == "digital-technology")
                     @include('booth._item',['booth_id'=>'booth-item2'])
                 @elseif($department->slug == "industrial-technology")
-                    @include('booth._item',['booth_id'=>'booth-item3'])
-                @else
                     @include('booth._item',['booth_id'=>'booth-item4'])
+                @else
+                    @include('booth._item',['booth_id'=>'booth-item3'])
                 @endif
             </div>
         </div>
