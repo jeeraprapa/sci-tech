@@ -23,23 +23,33 @@
             {{ Form::text('slug', null, ['class' => 'form-control']) }}
         </div>
     </div>
-    <div class="col-6">
+    <div class="col-4">
         <div class="form-group">
-            {{ Form::label('img', 'ภาพบูธ', array('class' => 'required')) }}
-            {{ Form::file('img', null, ['class' => 'form-control']) }}
-            @if(!empty($major) and $major->getMedia('img')->count())
+            {{ Form::label('icon', 'ภาพบูธพรีวิวหน้ารวม', array('class' => 'required')) }}
+            {{ Form::file('icon', null, ['class' => 'form-control']) }}
+            @if(!empty($major) and $major->getFirstMedia('icon'))
                 <br>
-                <img src="{{$major->getMedia('img')->first()->getFullUrl()}}" alt="" class="img-thumbnail">
+                <img src="{{$major->getFirstMedia('icon')->getFullUrl()}}" alt="" class="img-thumbnail">
             @endif
         </div>
     </div>
-    <div class="col-6">
+    <div class="col-4">
+        <div class="form-group">
+            {{ Form::label('img', 'ภาพบูธพื้นหลังหน้าหลัก', array('class' => 'required')) }}
+            {{ Form::file('img', null, ['class' => 'form-control']) }}
+            @if(!empty($major) and $major->getFirstMedia('img'))
+                <br>
+                <img src="{{$major->getFirstMedia('img')->getFullUrl()}}" alt="" class="img-thumbnail">
+            @endif
+        </div>
+    </div>
+    <div class="col-4">
         <div class="form-group">
             {{ Form::label('thumbnail', 'โปสเตอร์พรีวิว', array('class' => 'required')) }}
             {{ Form::file('thumbnail', null, ['class' => 'form-control']) }}
-            @if(!empty($major) and $major->getMedia('thumbnail')->count())
+            @if(!empty($major) and $major->getFirstMedia('thumbnail'))
                 <br>
-                <img src="{{$major->getMedia('thumbnail')->first()->getFullUrl()}}" alt="" class="img-thumbnail">
+                <img src="{{$major->getFirstMedia('thumbnail')->getFullUrl()}}" alt="" class="img-thumbnail">
             @endif
         </div>
     </div>

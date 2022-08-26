@@ -5,9 +5,9 @@
         {{$major->name}}
     </div>
 
-    @if($major->getMedia('thumbnail')->count())
+    @if($major->getFirstMedia('thumbnail'))
         <div id="thumbnail">
-            <img src="{{$major->getMedia('thumbnail')->first()->getFullUrl()}}" alt="{{$department->name}} {{$major->name}}">
+            <img src="{{$major->getFirstMedia('thumbnail')->getFullUrl()}}" alt="{{$department->name}} {{$major->name}}">
         </div>
     @endif
     @include('booth._btn')

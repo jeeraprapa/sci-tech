@@ -38,6 +38,12 @@ class MajorController extends Controller
 
         $major = Major::create($data);
 
+        if($request->hasFile('icon') && $request->file('icon')->isValid()) {
+            $major->clearMediaCollection('icon');
+            $major->addMediaFromRequest('icon')
+                  ->toMediaCollection('icon');
+        }
+
         if($request->hasFile('img') && $request->file('img')->isValid()) {
             $major->clearMediaCollection('img');
             $major->addMediaFromRequest('img')
@@ -83,6 +89,12 @@ class MajorController extends Controller
             $major->clearMediaCollection('img');
             $major->addMediaFromRequest('img')
                     ->toMediaCollection('img');
+        }
+
+        if($request->hasFile('icon') && $request->file('icon')->isValid()) {
+            $major->clearMediaCollection('icon');
+            $major->addMediaFromRequest('icon')
+                    ->toMediaCollection('icon');
         }
 
         if($request->hasFile('thumbnail') && $request->file('thumbnail')->isValid()) {
