@@ -81,6 +81,25 @@
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade modal-blog" id="modal-video" tabindex="-1" aria-labelledby="modal-video" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="text-title">
+                        <div class="title">
+                            <div class=" titletext" id="exampleModalLabel">Video แนะนำหลักสูตร</div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                    </div>
+
+                    <div class="text-detail">
+                        {!! $major->video !!}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @push('js')
