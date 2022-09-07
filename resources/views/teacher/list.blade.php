@@ -47,8 +47,10 @@
                                     <div class="col-8 text-detail pb-1"> {{$teacher->email}} </div>
                                     <div class="col-4 text-success pb-1"> Tel : </div>
                                     <div class="col-8 text-detail pb-1"> {{$teacher->tel}} </div>
+                                    @if($teacher->research)
                                     <div class="col-12 text-success pb-1"> ผลงานทางวิชาการ : </div>
                                     <div class="col-12 text-detail pb-1"> {!! $teacher->research !!} </div>
+                                    @endif
 
                                     @if($teacher->youtube_url)
                                     <div class="col-12 text-success pb-1"> วีดีโอแนะนำอาจารย์ : </div>
