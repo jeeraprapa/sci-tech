@@ -33,7 +33,7 @@
                                     <a class="nav-link {{request()->is('*'.$department->slug) ? 'active' : ''}} {{$loop->last ? "border-end-0" : ""}}"
                                        href="{{route('booth',['slug'=>$department->slug])}}">{{$department->name}}</a>
                                 @endforeach
-                                <a class="nav-link" href="{{asset('360')}}" target="_blank">งานวิจัยของนักเรียนและนักศึกษา</a>
+                                <a class="nav-link" href="{{asset('360')}}" target="_blank">งานวิจัยของนักศึกษา</a>
                                 <a class="nav-link" href="{{route('blogs')}}">กิจกรรมบริการวิชาการสังคม</a>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-center position-absolute position-right-0 mt-4" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <a class="nav-link" href="{{asset('360')}}" target="_blank">งานวิจัยของนักเรียนและนักศึกษา</a>
+                            <a class="nav-link" href="{{asset('360')}}" target="_blank">งานวิจัยของนักศึกษา</a>
                             <a class="nav-link" href="{{route('blogs')}}">กิจกรรมบริการวิชาการสังคม</a>
                         </div>
                     </div>

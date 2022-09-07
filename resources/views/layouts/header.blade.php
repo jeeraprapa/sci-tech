@@ -22,7 +22,7 @@
                     @endforeach
 
                     <a class="nav-link d-lg-none" href="{{route('blogs')}}">กิจกรรมบริการวิชาการสังคม</a>
-                    <a class="nav-link d-lg-none" href="{{asset('360')}}" target="_blank">งานวิจัยของนักเรียนและนักศึกษา</a>
+                    <a class="nav-link d-lg-none" href="{{asset('360')}}" target="_blank">งานวิจัยของนักศึกษา</a>
                 </div>
             </div>
             <button type="button" class="navbar-toggler d-none d-lg-inline-block border-0" data-bs-toggle="collapse"
@@ -37,7 +37,7 @@
                 class="collapse navbar-collapse justify-content-center position-absolute position-right-0 mt-4 bg-white"
                 id="navbarHamburger">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="{{asset('360')}}" target="_blank">งานวิจัยของนักเรียนและนักศึกษา</a>
+                    <a class="nav-link" href="{{asset('360')}}" target="_blank">งานวิจัยของนักศึกษา</a>
                     <a class="nav-link" href="{{route('blogs')}}">กิจกรรมบริการวิชาการสังคม</a>
                 </div>
             </div>
