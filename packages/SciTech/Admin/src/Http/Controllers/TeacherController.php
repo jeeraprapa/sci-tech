@@ -7,6 +7,7 @@ use SciTech\Admin\Http\Requests\Teacher\StoreTeacherRequest;
 use SciTech\Admin\Http\Requests\Teacher\UpdateTeacherRequest;
 use SciTech\Admin\Models\Department;
 use SciTech\Admin\Models\Teacher;
+use SciTech\Admin\Service\Editor;
 
 class TeacherController extends Controller
 {
@@ -28,6 +29,9 @@ class TeacherController extends Controller
     public function store(StoreTeacherRequest $request)
     {
         $data = $request->all();
+
+        $editor = new Editor();
+        $data['research'] = $editor->uploadImage($data['research']);
 
         $teacher = Teacher::create($data);
 
@@ -58,6 +62,10 @@ class TeacherController extends Controller
         $data = $request->all();
 
         $teacher = Teacher::findOrFail($id);
+
+        $editor = new Editor();
+        $data['research'] = $editor->uploadImage($data['research']);
+
 
         $teacher->fill($data)->saveOrFail();
 

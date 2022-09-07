@@ -37,18 +37,21 @@
                             </div>
                             <div class="col-sm-12 col-md-8">
                                 <div class="row lh-lg">
-                                    <div class="col-4 text-success"> แขนงวิชา : </div>
-                                    <div class="col-8 text-detail"> {{$department->name}} </div>
-                                    <div class="col-4 text-success">ประวัติการศึกษา :</div>
-                                    <div class="col-8 text-detail">
+                                    <div class="col-4 text-success pb-1"> แขนงวิชา : </div>
+                                    <div class="col-8 text-detail pb-1"> {{$department->name}} </div>
+                                    <div class="col-4 text-success pb-1">ประวัติการศึกษา :</div>
+                                    <div class="col-8 text-detail pb-1">
                                         {!! nl2br($teacher->education) !!}
                                     </div>
-                                    <div class="col-4 text-success"> E-Mail : </div>
-                                    <div class="col-8 text-detail"> {{$teacher->email}} </div>
-                                    <div class="col-4 text-success"> Tel : </div>
-                                    <div class="col-8 text-detail"> {{$teacher->tel}} </div>
+                                    <div class="col-4 text-success pb-1"> E-Mail : </div>
+                                    <div class="col-8 text-detail pb-1"> {{$teacher->email}} </div>
+                                    <div class="col-4 text-success pb-1"> Tel : </div>
+                                    <div class="col-8 text-detail pb-1"> {{$teacher->tel}} </div>
+                                    <div class="col-12 text-success pb-1"> ผลงานทางวิชาการ : </div>
+                                    <div class="col-12 text-detail pb-1"> {!! $teacher->research !!} </div>
+
                                     @if($teacher->youtube_url)
-                                    <div class="col-12 text-success"> วีดีโอแนะนำอาจารย์ : </div>
+                                    <div class="col-12 text-success pb-1"> วีดีโอแนะนำอาจารย์ : </div>
                                     <div class="col-12 py-4">
                                         <div class="ratio ratio-16x9">
                                             <iframe src="{{$teacher->youtube_url}}" style="border-radius: 12px;" allowfullscreen></iframe>

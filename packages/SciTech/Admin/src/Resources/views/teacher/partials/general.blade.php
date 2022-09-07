@@ -29,6 +29,12 @@
             {{ Form::textarea('education', null, ['class' => 'form-control','size'=>'x3']) }}
         </div>
     </div>
+    <div class="col-12">
+        <div class="form-group">
+            {{ Form::label('research', 'ผลงานทางวิชาการ', array('class' => 'required')) }}
+            {{ Form::textarea('research', null, ['class' => 'form-control editor','size'=>'x3']) }}
+        </div>
+    </div>
     <div class="col-6">
         <div class="form-group">
             {{ Form::label('youtube_url', 'Youtube Link', array('class' => 'required')) }}
