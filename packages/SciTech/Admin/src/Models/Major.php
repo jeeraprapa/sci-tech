@@ -44,4 +44,25 @@ class Major extends Model implements HasMedia
 
         return "http://img.youtube.com/vi/$id/mqdefault.jpg";
     }
+
+
+    public function getBoothIdAttribute ()
+    {
+        $slug = $this->department->slug;
+        switch ($slug){
+            case "computer-science":
+                $id = "booth1";
+                break;
+            case "digital-technology":
+                $id = "booth2";
+                break;
+            case "industrial-technology":
+                $id = "booth4";
+                break;
+            default:
+                $id = "booth3";
+        }
+        return $id;
+
+    }
 }
