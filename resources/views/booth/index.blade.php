@@ -23,6 +23,12 @@
                              class="img-fluid">
                             @endif
                         </a>
+                        <div class="poster" id="poster1">
+                            <img src="../images/poster/poster1.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="poster" id="poster2">
+                            <img src="../images/poster/poster2.jpg" alt="" class="img-fluid">
+                        </div>
                     </div>
                 @endforeach
             </div>
