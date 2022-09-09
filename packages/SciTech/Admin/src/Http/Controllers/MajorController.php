@@ -38,6 +38,18 @@ class MajorController extends Controller
 
         $major = Major::create($data);
 
+        if($request->hasFile('poster1') && $request->file('poster1')->isValid()) {
+            $major->clearMediaCollection('poster1');
+            $major->addMediaFromRequest('poster1')
+                  ->toMediaCollection('poster1');
+        }
+
+        if($request->hasFile('poster2') && $request->file('poster2')->isValid()) {
+            $major->clearMediaCollection('poster2');
+            $major->addMediaFromRequest('poster2')
+                  ->toMediaCollection('poster2');
+        }
+
         if($request->hasFile('icon') && $request->file('icon')->isValid()) {
             $major->clearMediaCollection('icon');
             $major->addMediaFromRequest('icon')
@@ -84,6 +96,18 @@ class MajorController extends Controller
         $data['full_name'] = $editor->uploadImage($data['full_name']);
 
         $major->fill($data)->saveOrFail();
+
+        if($request->hasFile('poster1') && $request->file('poster1')->isValid()) {
+            $major->clearMediaCollection('poster1');
+            $major->addMediaFromRequest('poster1')
+                  ->toMediaCollection('poster1');
+        }
+
+        if($request->hasFile('poster2') && $request->file('poster2')->isValid()) {
+            $major->clearMediaCollection('poster2');
+            $major->addMediaFromRequest('poster2')
+                  ->toMediaCollection('poster2');
+        }
 
         if($request->hasFile('img') && $request->file('img')->isValid()) {
             $major->clearMediaCollection('img');
