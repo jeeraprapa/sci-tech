@@ -23,6 +23,26 @@
             {{ Form::text('slug', null, ['class' => 'form-control']) }}
         </div>
     </div>
+     <div class="col-4">
+         <div class="form-group">
+             {{ Form::label('poster1', 'โปสเตอร์พรีวิวหน้ารวม 1', array('class' => 'required')) }}
+             {{ Form::file('poster1', null, ['class' => 'form-control']) }}
+             @if(!empty($major) and $major->getFirstMedia('poster1'))
+                 <br>
+                 <img src="{{$major->getFirstMedia('poster1')->getFullUrl()}}" alt="" class="img-thumbnail">
+             @endif
+         </div>
+     </div>
+     <div class="col-4">
+         <div class="form-group">
+             {{ Form::label('poster2', 'โปสเตอร์พรีวิวหน้ารวม 2', array('class' => 'required')) }}
+             {{ Form::file('poster2', null, ['class' => 'form-control']) }}
+             @if(!empty($major) and $major->getFirstMedia('poster2'))
+                 <br>
+                 <img src="{{$major->getFirstMedia('poster2')->getFullUrl()}}" alt="" class="img-thumbnail">
+             @endif
+         </div>
+     </div>
     <div class="col-4">
         <div class="form-group">
             {{ Form::label('icon', 'ภาพบูธพรีวิวหน้ารวม', array('class' => 'required')) }}
@@ -45,7 +65,7 @@
     </div>
     <div class="col-4">
         <div class="form-group">
-            {{ Form::label('thumbnail', 'โปสเตอร์พรีวิว', array('class' => 'required')) }}
+            {{ Form::label('thumbnail', 'โปสเตอร์พรีวิวหน้าหลัก', array('class' => 'required')) }}
             {{ Form::file('thumbnail', null, ['class' => 'form-control']) }}
             @if(!empty($major) and $major->getFirstMedia('thumbnail'))
                 <br>

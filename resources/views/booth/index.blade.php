@@ -23,12 +23,16 @@
                              class="img-fluid">
                             @endif
                         </a>
+                        @if($major->getFirstMedia('poster1'))
                         <div class="poster" id="poster1">
-                            <img src="../images/poster/poster1.jpg" alt="" class="img-fluid">
+                            <img src="{{$major->getFirstMedia('poster1')->getFullUrl()}}" alt="{{$department->name}} {{$major->name}}" class="img-fluid">
                         </div>
+                        @endif
+                        @if($major->getFirstMedia('poster2'))
                         <div class="poster" id="poster2">
-                            <img src="../images/poster/poster2.jpg" alt="" class="img-fluid">
+                            <img src="{{$major->getFirstMedia('poster2')->getFullUrl()}}" alt="{{$department->name}} {{$major->name}}" class="img-fluid">
                         </div>
+                        @endif
                     </div>
                 @endforeach
             </div>
