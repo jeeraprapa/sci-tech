@@ -162,6 +162,44 @@ body {
   margin-bottom: 0;
   color: #C97A1B;
 }
+#second .float-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+@media screen and (min-width: 1200px) {
+  #second .float-menu {
+    display: flex;
+  }
+}
+#second .float-menu a {
+  text-decoration: none;
+}
+#second .float-menu a img {
+  width: 5vw;
+}
+
+.tooltip .tooltip-arrow {
+  display: none;
+}
+.tooltip .tooltip-inner {
+  padding: 1rem;
+  background: rgba(26, 26, 24, 0.61);
+  border-radius: 30px;
+  font-size: 16px;
+  font-family: "Kanit", sans-serif;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+.tooltip .tooltip-inner:after, .tooltip .tooltip-inner:before {
+  display: none;
+}
 
 #blog {
   background-size: 100%;

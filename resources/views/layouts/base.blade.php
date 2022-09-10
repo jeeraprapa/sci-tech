@@ -7,12 +7,12 @@
 </head>
 
 <body>
-<div class="fakeLoader"></div>
-<script>
-    $.fakeLoader({
-        bgColor: '#98cc77'
-    });
-</script>
+{{--<div class="fakeLoader"></div>--}}
+{{--<script>--}}
+{{--    $.fakeLoader({--}}
+{{--        bgColor: '#98cc77'--}}
+{{--    });--}}
+{{--</script>--}}
 <div class="wrapper">
     @include('layouts.header')
     <main>

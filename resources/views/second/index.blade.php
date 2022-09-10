@@ -68,43 +68,56 @@
                 <img src="{{asset('images/sm-main.png')}}" alt="" class="img-fluid w-100">
             </div>
             <div class="d-none d-lg-block position-relative" id="video-container">
-                <img src="{{asset('images/main.png')}}" alt="" class="img-fluid w-100 opacity-0 z-index-99" usemap="#area-map">
+                <img src="{{asset('images/preview.jpg')}}" alt="" class="img-fluid w-100 opacity-0 z-index-99" usemap="#area-map">
 
-                <map name="area-map">
-                    <area class="area-map" target="" alt="1"
-                          data-name="แขนงวิชาวิทยาการคอมพิวเตอร์"
-                          data-type="ระดับปริญาตรี" href="{{route('booth.com-sci')}}"
-                          coords="13,317,221,187,584,444,307,626,-1,444,9,368"
-                          shape="poly">
-                    <area class="area-map" target="" alt="2"
-                          data-name="แขนงวิชาเทคโนโลยีดิจิทัล" data-type="ระดับปริญาโท"
-                          href="{{route('booth.tech-digital')}}" coords="471,323,737,120,1150,403,864,568,516,363"
-                          shape="poly">
-                    <area class="area-map" target="" alt="3"
-                          data-name="แขนงวิชาเทคโนโลยีอุตสาหกรรม"
-                          data-type="ระดับปริญาตรี" href="{{route('booth.industrial-tech')}}"
-                          coords="218,746,579,533,840,693,493,903" shape="poly">
-                    <area class="area-map" target="" alt="4"
-                          data-name="แขนงวิชาเทคโนโลยการจัดการทางวิศวกรรม"
-                          data-type="ระดับปริญาโท" href="{{route('booth.engineer-management')}}"
-                          coords="845,678,1220,462,1420,618,1084,836" shape="poly">
-                </map>
-
-                <video autoplay muted loop preload="auto" class="position-absolute w-100 top-0">
-                    <source src="{{asset('video/video.mp4')}}" type="video/mp4">
+                <video autoplay muted loop preload="auto" class="position-absolute w-100 top-0" poster="{{asset('images/preview.jpg')}}">
+                    <source src="{{asset('video/animate.mp4')}}" type="video/mp4">
                 </video>
             </div>
+
+            <map name="area-map">
+                <area class="area-map" target="" alt="1"
+                      data-name="แขนงวิชาวิทยาการคอมพิวเตอร์"
+                      data-type="ระดับปริญาตรี" href="{{route('booth.com-sci')}}"
+                      coords="13,317,221,187,584,444,307,626,-1,444,9,368"
+                      shape="poly">
+                <area class="area-map" target="" alt="2"
+                      data-name="แขนงวิชาเทคโนโลยีดิจิทัล" data-type="ระดับปริญาโท"
+                      href="{{route('booth.tech-digital')}}" coords="471,323,737,120,1150,403,864,568,516,363"
+                      shape="poly">
+                <area class="area-map" target="" alt="3"
+                      data-name="แขนงวิชาเทคโนโลยีอุตสาหกรรม"
+                      data-type="ระดับปริญาตรี" href="{{route('booth.industrial-tech')}}"
+                      coords="218,746,579,533,840,693,493,903" shape="poly">
+                <area class="area-map" target="" alt="4"
+                      data-name="แขนงวิชาเทคโนโลยการจัดการทางวิศวกรรม"
+                      data-type="ระดับปริญาโท" href="{{route('booth.engineer-management')}}"
+                      coords="845,678,1220,462,1420,618,1084,836" shape="poly">
+            </map>
         </main>
+        <div class="float-menu">
+            <a href="{{asset('360')}}" data-bs-toggle="tooltip" data-bs-placement="right" title="งานวิจัยของนักศึกษา">
+                <img src="{{asset('images/icon-research.png')}}" alt="">
+            </a>
+            <a href="{{route('blogs')}}" data-bs-toggle="tooltip" data-bs-placement="right" title="กิจกรรมบริการวิชาการสังคม">
+                <img src="{{asset('images/icon-blog.png')}}" alt="">
+            </a>
+        </div>
         <div id="tooltip" style=""><span></span></div>
     </div>
 </body>
 <script src="{{asset('vendors/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('vendors/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{ asset('js/vendors/jquery-3.6.0.min.js') }}"></script>
 <script src="{{ asset('js/vendors/jquery.maphilight.js') }}" defer></script>
 <script src="{{ asset('js/vendors/jquery.rwdImageMaps.min.js') }}" defer></script>
 
 <script>
     $(document).ready(function (){
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
 
         var mouseX;
         var mouseY;
@@ -118,7 +131,7 @@
         $('img[usemap]').rwdImageMaps();
 
         $('img[usemap]').maphilight({
-            fillOpacity: 0.1,
+            fillOpacity: 1,
             stroke: false,
             fillColor: 'E8ECF2FF'
         });
