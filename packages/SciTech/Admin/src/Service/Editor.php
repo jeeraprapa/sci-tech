@@ -11,7 +11,7 @@ class Editor
     public function uploadImage($field)
     {
         $dom = new \DomDocument();
-        $dom->loadHtml($field, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+        $dom->loadHtml('<?xml encoding="utf-8" ?>' .$field, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
         $image_file = $dom->getElementsByTagName('img');
 
         if (!File::exists(public_path('uploads'))) {
