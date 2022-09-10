@@ -1,33 +1,40 @@
 #teacher
     header
-        background: radial-gradient(50% 983.68% at 50% 50%, #97d267 0%, #237707 100%)
-        border-radius: 30px
+        background: #FFFFFF
+        border: 5px solid #FFFFFF
+        border-radius: 100px
         width: fit-content
         padding: 1rem 4rem
         text-align: center
         margin: 1rem auto
+        box-shadow: 0px 4px 10px rgb(0 0 0 / 25%)
         h1
-            color: white
+            color: #628D00
             font-style: normal
             font-weight: 600
             font-size: 22px
             span
-                font-size: 20px
+                font-size: 22px
                 display: block
                 color: #313131
-                font-weight: 400
-                @include screen('lg')
-                    font-size: 30px
+                font-weight: 600
             @include screen('lg')
-                font-size: 31px
+                font-size: 32px
     #teacher-list
         div
             cursor: pointer
+        .teacher-img
+            overflow: hidden
+            border-radius: 24px
             &:hover
                 img
                     border: solid 2px #000000
-        img
-            border-radius: 24px
+                    transform: scale(1.1)
+            img
+                border-radius: 24px
+                transition: transform .5s ease
+
+
 
     .modal-blog
         .modal-content
