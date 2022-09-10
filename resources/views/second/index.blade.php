@@ -71,7 +71,7 @@
                 <img src="{{asset('images/preview.jpg')}}" alt="" class="img-fluid w-100 opacity-0 z-index-99" usemap="#area-map">
 
                 <video autoplay muted loop preload="auto" class="position-absolute w-100 top-0" poster="{{asset('images/preview.jpg')}}">
-                    <source src="{{asset('video/animate.mp4')}}" type="video/mp4">
+                    <source src="{{asset('video/main.mp4')}}" type="video/mp4">
                 </video>
             </div>
 
