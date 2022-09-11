@@ -106,7 +106,7 @@
         <div id="tooltip" style=""><span></span></div>
     </div>
 </body>
-<script src="{{asset('vendors/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('vendors/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{ asset('js/vendors/jquery-3.6.0.min.js') }}"></script>
 <script src="{{ asset('js/vendors/jquery.maphilight.js') }}" defer></script>
 <script src="{{ asset('js/vendors/jquery.rwdImageMaps.min.js') }}" defer></script>
