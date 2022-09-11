@@ -365,6 +365,18 @@ body {
   align-items: flex-end;
   justify-content: center;
 }
+#booth #booth-list .booth1,
+#booth #booth-list .booth2,
+#booth #booth-list .booth3,
+#booth #booth-list .booth4 {
+  transition: all 1s ease;
+}
+#booth #booth-list .booth1:hover,
+#booth #booth-list .booth2:hover,
+#booth #booth-list .booth3:hover,
+#booth #booth-list .booth4:hover {
+  transform: scale(1.1);
+}
 #booth #posters {
   cursor: pointer;
   display: inline !important;
