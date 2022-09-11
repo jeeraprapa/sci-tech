@@ -103,7 +103,12 @@
                 <img src="{{asset('images/icon-blog.png')}}" alt="">
             </a>
         </div>
-        <div id="tooltip" style=""><span></span></div>
+        <div id="tooltip" style="">
+            <span>
+                <img src='{{asset('images/pin.png')}}'>
+                <div></div>
+            </span>
+        </div>
     </div>
 </body>
 <script src="{{asset('vendors/js/bootstrap.bundle.min.js')}}"></script>
@@ -139,8 +144,8 @@
             // populate tooltip string
             var name = $(this).data('name');
             var type = $(this).data('type');
-            name = "<img src='{{asset('images/pin.png')}}'><div>" + name + "<p>" + type + "</p></div>";
-            $('#tooltip span').html(name);
+            name = "" + name + "<p>" + type + "</p>";
+            $('#tooltip span div').html(name);
 
             // show tooltip
             $('#tooltip').stop(false, true).fadeIn(1);
