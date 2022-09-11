@@ -319,48 +319,68 @@
             position: absolute
             top: 55%
             left: 0
-            right: 58%
+            right: 64%
             @include screen('sm')
                 right: 45%
             @include screen('md')
-                right: 60%
+                right: 66%
             @include screen('lg')
-                right: 60%
+                right: 66%
             img
-                height: 65px
+                height: 55px
                 @include screen('sm')
                     height: 55px
                 @include screen('md')
-                    height: 145px
+                    height: 120px
                 @include screen('lg')
-                    height: 225px
+                    height: 122px
+                @include screen('xl')
+                    height: 170px
         #video
             top: 57%
-            left: 72%
-            @include screen('sm')
-                top: 55%
-                left: 74%
+            left: 60%
+            @include screen('md')
+                top: 59%
+                left: 60%
             @include screen('lg')
-                top: 55%
-                left: 76%
+                top: 58%
+                left: 59%
+            @include screen('wide')
+                top: 60%
+                left: 61%
+            @include screen('xwide')
+                top: 60%
+                left: 62.7%
         #course
-            top: 35%
-            left: 51%
-            @include screen('sm')
+            top: 43%
+            left: 42%
+            @include screen('md')
                 top: 35%
-                left: 53%
+                left: 42%
             @include screen('lg')
                 top: 35%
-                left: 55%
+                left: 41%
+            @include screen('wide')
+                top: 35%
+                left: 43%
+            @include screen('xwide')
+                top: 35%
+                left: 45%
         #posters
-            top: 50%
+            top: 41%
             right: 72%
-            @include screen('sm')
-                top: 50%
-                right: 73%
+            @include screen('xs')
+                top: 43%
+                right: 75%
             @include screen('lg')
-                top: 45%
-                right: 76%
+                top: 43%
+                right: 74%
+            @include screen('wide')
+                top: 43%
+                right: 77%
+            @include screen('xwide')
+                top: 43%
+                right: 79%
 
         #name
             font-size: 0.6rem
@@ -372,11 +392,15 @@
             @include screen('md')
                 font-size: 1rem
                 top: 30%
-                right: 3%
+                right: 10%
             @include screen('lg')
                 font-size: 1rem
                 top: 30%
                 right: 8%
+            @include screen('wide')
+                font-size: 1rem
+                top: 30%
+                right: 20%
     .header-booth-detail
         text-align: center
         h1
@@ -413,7 +437,7 @@
         position: relative
         .poster
             position: absolute
-    .booth1    
+    .booth1
         #poster1, #poster2
             img
                 max-width: 49px
@@ -455,7 +479,7 @@
             @include screen('xwide')
                 left: 21.4%
                 top: 38%
-        
+
         #poster2
             left: 75%
             top: 38%
@@ -480,8 +504,8 @@
             @include screen('xwide')
                 left: 69%
                 top: 38%
-    
-    .booth2    
+
+    .booth2
         #poster1
             img
                 max-width: 25px
@@ -540,7 +564,7 @@
             @include screen('xwide')
                 left: 28%
                 top: 49%
-        
+
         #poster2
             left: 68%
             top: 44.6%
@@ -566,7 +590,7 @@
                 left: 65.7%
                 top: 44.6%
 
-    .booth3 
+    .booth3
         #poster1
             img
                 max-width: 31px
@@ -626,7 +650,7 @@
             @include screen('xwide')
                 left: 11%
                 top: 58%
-        
+
         #poster2
             left: 70%
             top: 65%
@@ -652,7 +676,7 @@
                 left: 70.5%
                 top: 65%
 
-    .booth4  
+    .booth4
         #poster1
             img
                 max-width: 64px
@@ -712,7 +736,7 @@
             @include screen('xwide')
                 left: 26%
                 top: 49%
-        
+
         #poster2
             left: 51%
             top: 40%
