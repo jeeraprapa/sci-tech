@@ -749,12 +749,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   #booth #booth-item3 #thumbnail {
-    left: 62%;
+    left: 64%;
   }
 }
 @media screen and (min-width: 992px) {
   #booth #booth-item3 #thumbnail {
-    left: 62%;
+    left: 64%;
   }
 }
 #booth #booth-item3 #thumbnail img {
@@ -777,32 +777,50 @@ body {
 }
 #booth #booth-item3 #video {
   top: 38%;
-  left: 43%;
+  left: 42%;
+}
+@media screen and (min-width: 768px) {
+  #booth #booth-item3 #video {
+    top: 38%;
+    left: 43%;
+  }
 }
 @media screen and (min-width: 992px) {
   #booth #booth-item3 #video {
-    top: 43%;
-    left: 46%;
+    top: 54%;
+    left: 45%;
   }
 }
 #booth #booth-item3 #course {
   top: 68%;
   left: 14%;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   #booth #booth-item3 #course {
     top: 70%;
     left: 15%;
+  }
+}
+@media screen and (min-width: 992px) {
+  #booth #booth-item3 #course {
+    top: 70%;
+    left: 17%;
   }
 }
 #booth #booth-item3 #posters {
   top: 58%;
   right: 27%;
 }
+@media screen and (min-width: 768px) {
+  #booth #booth-item3 #posters {
+    top: 64%;
+    right: 26%;
+  }
+}
 @media screen and (min-width: 992px) {
   #booth #booth-item3 #posters {
-    top: 60%;
-    right: 31%;
+    top: 65%;
+    right: 28%;
   }
 }
 #booth #booth-item3 #name {
@@ -820,14 +838,14 @@ body {
   #booth #booth-item3 #name {
     font-size: 1rem;
     top: 80%;
-    right: 5%;
+    right: 7%;
   }
 }
 @media screen and (min-width: 992px) {
   #booth #booth-item3 #name {
     font-size: 1rem;
-    top: 80%;
-    right: 5%;
+    top: 78%;
+    right: 15%;
   }
 }
 #booth #booth-item4 .booth-name {

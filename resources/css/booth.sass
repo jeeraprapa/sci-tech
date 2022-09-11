@@ -254,9 +254,9 @@
             @include screen('sm')
                 left: 45%
             @include screen('md')
-                left: 62%
+                left: 64%
             @include screen('lg')
-                left: 62%
+                left: 64%
             img
                 height: 30px
                 @include screen('sm')
@@ -267,22 +267,31 @@
                     height: 80px
         #video
             top: 38%
-            left: 43%
+            left: 42%
+            @include screen('md')
+                top: 38%
+                left: 43%
             @include screen('lg')
-                top: 43%
-                left: 46%
+                top: 54%
+                left: 45%
         #course
             top: 68%
             left: 14%
-            @include screen('lg')
+            @include screen('md')
                 top: 70%
                 left: 15%
+            @include screen('lg')
+                top: 70%
+                left: 17%
         #posters
             top: 58%
             right: 27%
+            @include screen('md')
+                top: 64%
+                right: 26%
             @include screen('lg')
-                top: 60%
-                right: 31%
+                top: 65%
+                right: 28%
 
         #name
             font-size: 0.6rem
@@ -294,11 +303,11 @@
             @include screen('md')
                 font-size: 1rem
                 top: 80%
-                right: 5%
+                right: 7%
             @include screen('lg')
                 font-size: 1rem
-                top: 80%
-                right: 5%
+                top: 78%
+                right: 15%
 
     #booth-item4
         .booth-name
