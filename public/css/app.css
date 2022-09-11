@@ -459,53 +459,57 @@ body {
   }
 }
 #booth #booth-item1 #video {
-  top: 40%;
-  right: 11%;
+  top: 35%;
+  right: 43%;
 }
 @media screen and (min-width: 576px) {
   #booth #booth-item1 #video {
-    top: 40%;
-    right: 11%;
+    top: 35%;
+    right: 43%;
   }
 }
 @media screen and (min-width: 768px) {
   #booth #booth-item1 #video {
-    top: 40%;
-    right: 10%;
+    top: 48%;
+    right: 23%;
   }
 }
 @media screen and (min-width: 992px) {
   #booth #booth-item1 #video {
-    top: 40%;
-    right: 10%;
+    top: 55%;
+    right: 26%;
   }
 }
 #booth #booth-item1 #course {
-  top: 62%;
+  top: 65%;
+  right: 43%;
 }
 @media screen and (min-width: 576px) {
   #booth #booth-item1 #course {
-    top: 62%;
+    top: 65%;
+    right: 43%;
   }
 }
 @media screen and (min-width: 768px) {
   #booth #booth-item1 #course {
-    top: 63%;
+    top: 66%;
+    right: 43%;
   }
 }
 @media screen and (min-width: 992px) {
   #booth #booth-item1 #course {
-    top: 63%;
+    top: 68%;
+    right: 46%;
   }
 }
 #booth #booth-item1 #posters {
-  top: 35%;
-  right: 42%;
+  top: 48%;
+  right: 23%;
 }
 @media screen and (min-width: 576px) {
   #booth #booth-item1 #posters {
-    top: 35%;
-    right: 42%;
+    top: 48%;
+    right: 23%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -516,33 +520,33 @@ body {
 }
 @media screen and (min-width: 992px) {
   #booth #booth-item1 #posters {
-    top: 35%;
-    right: 45%;
+    top: 38%;
+    right: 46%;
   }
 }
 #booth #booth-item1 #name {
   font-size: 0.6rem;
   top: 48%;
-  left: 4%;
+  left: 20%;
 }
 @media screen and (min-width: 576px) {
   #booth #booth-item1 #name {
     top: 48%;
-    left: 4%;
+    left: 20%;
   }
 }
 @media screen and (min-width: 768px) {
   #booth #booth-item1 #name {
     font-size: 1rem;
     top: 48%;
-    left: 4%;
+    left: 13%;
   }
 }
 @media screen and (min-width: 992px) {
   #booth #booth-item1 #name {
     font-size: 1rem;
-    top: 48%;
-    left: 4%;
+    top: 55%;
+    left: 20%;
   }
 }
 #booth #booth-item2 .booth-name {
