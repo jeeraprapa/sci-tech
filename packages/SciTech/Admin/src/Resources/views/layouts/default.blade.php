@@ -17,6 +17,12 @@
     <link rel="stylesheet" href="{{ asset('vendor/admin/css/adminlte.css') }}">
     @stack('css')
 
+    <style>
+        .note-editor.note-airframe.fullscreen, .note-editor.note-frame.fullscreen{
+            background: rgb(255 255 255 / 80%);
+        }
+    </style>
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <!-- Site wrapper -->

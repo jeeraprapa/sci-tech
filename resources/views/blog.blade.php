@@ -54,9 +54,9 @@
                             <div class=" titletext" id="exampleModalLabel">{{$blog->name}}</div>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="date">
-                            {{$blog->published_at->format('d/m/Y')}}
-                        </div>
+{{--                        <div class="date">--}}
+{{--                            {{$blog->published_at->format('d/m/Y')}}--}}
+{{--                        </div>--}}
                     </div>
 
                     <div class="image-content">
