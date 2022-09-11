@@ -466,7 +466,7 @@ body {
 }
 #booth #booth-item1 #thumbnail {
   position: absolute;
-  top: 30%;
+  top: 33%;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -474,31 +474,31 @@ body {
   width: 100px;
 }
 #booth #booth-item1 #thumbnail img {
-  height: 55px;
+  height: 34px;
 }
 @media screen and (min-width: 576px) {
   #booth #booth-item1 #thumbnail img {
-    height: 115px;
+    height: 72px;
   }
 }
 @media screen and (min-width: 992px) {
   #booth #booth-item1 #thumbnail img {
-    height: 105px;
+    height: 66px;
   }
 }
 @media screen and (min-width: 1200px) {
   #booth #booth-item1 #thumbnail img {
-    height: 150px;
+    height: 98px;
   }
 }
 @media screen and (min-width: 1600px) {
   #booth #booth-item1 #thumbnail img {
-    height: 190px;
+    height: 120px;
   }
 }
 #booth #booth-item1 #video {
-  top: 35%;
-  right: 43%;
+  top: 48%;
+  right: 24%;
 }
 @media screen and (min-width: 576px) {
   #booth #booth-item1 #video {
@@ -541,8 +541,8 @@ body {
   }
 }
 #booth #booth-item1 #posters {
-  top: 48%;
-  right: 23%;
+  top: 35%;
+  right: 43%;
 }
 @media screen and (min-width: 576px) {
   #booth #booth-item1 #posters {
