@@ -10,10 +10,10 @@
         </header>
         <div class="row justify-content-center" id="teacher-list">
             @foreach($department->teachers as $teacher)
-            <div class="col-12 col-md-6 col-lg-3 p-4 text-center">
-            <div class="teacher-img">
-                <img src="{{$teacher->getMedia('img')->first()->getFullUrl()}}" alt="" class="w-100" data-bs-toggle="modal" data-bs-target="#teacherModal-{{$teacher->id}}">
-            </div>
+            <div class="col-12 col-md-6 col-lg-3 p-4 text-center ">
+                <div class="teacher-img">
+                    <img src="{{$teacher->getMedia('img')->first()->getFullUrl()}}" alt="" class="w-100" data-bs-toggle="modal" data-bs-target="#teacherModal-{{$teacher->id}}">
+                </div>
                 <p class="text-center fw-bold p-2">{{$teacher->name}}</p>
             </div>
             @endforeach

@@ -88,7 +88,13 @@
                 <div class="modal-body p-0">
                     <div class="text-title">
                         <div class="title">
-                            <div class=" titletext" id="exampleModalLabel">Video แนะนำหลักสูตร</div>
+                            <div class=" titletext" id="exampleModalLabel">
+                                @if($department->slug != "digital-technology")
+                                    Video แนะนำหลักสูตร
+                                @else
+                                    Video แนะนำชุดวิชาและความเชี่ยวชาญเฉพาะด้าน (กลุ่มวิชาวิทยาการดิจิทัล)
+                                @endif
+                            </div>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                     </div>
