@@ -13,7 +13,6 @@
                 @include('booth._header')
             @endif
 
-
                 @if($department->slug == "computer-science")
                     @include('booth.detail._item',['booth_id'=>'booth-item1'])
                 @elseif($department->slug == "digital-technology")
@@ -74,10 +73,10 @@
                     <div class="text-title">
                         <div class="title">
                             <div class=" titletext" id="exampleModalLabel">
-                                @if($department->slug != "digital-technology")
+                                @if(!$major->video_title)
                                     Video แนะนำหลักสูตร
                                 @else
-                                    Video แนะนำชุดวิชาและความเชี่ยวชาญเฉพาะด้าน (กลุ่มวิชาวิทยาการดิจิทัล)
+                                    {{$major->video_title}}
                                 @endif
                             </div>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

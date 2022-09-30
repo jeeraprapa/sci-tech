@@ -29,6 +29,18 @@
             {{ Form::text('slug', null, ['class' => 'form-control']) }}
         </div>
     </div>
+    <div class="col-6">
+        <div class="form-group">
+            {{ Form::label('primary_color', 'Primary Color', array('class' => 'required')) }}
+            {{ Form::color('primary_color', null, ['class' => 'form-control']) }}
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group">
+            {{ Form::label('secondary_color', 'Secondary Color', array('class' => 'required')) }}
+            {{ Form::color('secondary_color', null, ['class' => 'form-control']) }}
+        </div>
+    </div>
 </div>
 {{ Form::submit('บันทึก', ['class' => 'btn btn-primary']) }}
 <a href="{{ route('admin.blog.index') }}" class="btn btn-secondary">ย้อนกลับ</a>

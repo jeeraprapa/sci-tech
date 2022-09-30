@@ -336,12 +336,14 @@ body {
 #booth .booth-title {
   display: flex;
   margin: 50px auto 100px;
-  background-image: url("/images/booth/bg_header.png");
+  background-image: url("/images/booth/bg_header_transparent.png");
   background-size: 100% 100%;
+  border-radius: 20px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 6px 62px;
+  position: relative;
 }
 #booth .booth-title h1 {
   color: white;
