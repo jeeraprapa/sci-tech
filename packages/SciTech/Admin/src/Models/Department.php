@@ -14,7 +14,7 @@ class Department extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'name','slug','type'
+        'name','title','sub_title','slug','type'
     ];
 
     public function teachers ()

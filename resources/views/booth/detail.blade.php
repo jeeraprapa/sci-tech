@@ -7,38 +7,23 @@
 @section('content')
     <section id="booth">
         <div class="container-fluid">
-            <header class="header-booth-detail">
-                <h1>
-                    {{$department->type}}
-                </h1>
-                <nav class="d-none d-lg-flex">
-                    <a href="{{route('booth.major',['department'=>$department->slug,'slug'=>$major->slug])}}" class="{{$next ? '' : 'border-right'}}">
-                        <h2>{{$major->name}}</h2>
-                    </a>
-                    @if($next)
-                        <a href="{{route('booth.major',['department'=>$department->slug,'slug'=>$next->slug])}}">
-                            <h2>{{$next->name}}</h2>
-                        </a>
-                    @endif
-                </nav>
-                <nav class=" d-lg-none">
-                    <a href="{{route('booth.major',['department'=>$department->slug,'slug'=>$major->slug])}}" class="border-right">
-                        <h2>{{$major->name}}</h2>
-                    </a>
-                </nav>
-            </header>
+            @if($department->majors->count() > 1)
+                @include('booth.detail._header')
+            @else
+                @include('booth._header')
+            @endif
 
-            <div class="row justify-content-center" id="booth-list">
+
                 @if($department->slug == "computer-science")
-                    @include('booth._item',['booth_id'=>'booth-item1'])
+                    @include('booth.detail._item',['booth_id'=>'booth-item1'])
                 @elseif($department->slug == "digital-technology")
-                    @include('booth._item',['booth_id'=>'booth-item2'])
+                    @include('booth.detail._item',['booth_id'=>'booth-item2'])
                 @elseif($department->slug == "industrial-technology")
-                    @include('booth._item',['booth_id'=>'booth-item4'])
+                    @include('booth.detail._item',['booth_id'=>'booth-item4'])
                 @else
-                    @include('booth._item',['booth_id'=>'booth-item3'])
+                    @include('booth.detail._item',['booth_id'=>'booth-item3'])
                 @endif
-            </div>
+
         </div>
     </section>
 
@@ -117,7 +102,7 @@
     <script>
         $(document).ready(function (){
             lightGallery(document.getElementById('lightgallery'))
-            lightGallery(document.getElementById('video'));
+            // lightGallery(document.getElementById('video'));
         });
         function showGallery(){
             $("#lightgallery div:nth-child(1)").trigger("click");

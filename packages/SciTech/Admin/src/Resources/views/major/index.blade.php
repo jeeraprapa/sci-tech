@@ -29,9 +29,11 @@
                         @forelse($majors as $value)
                             <tr>
                                 <td>
+                                    @if($value->getFirstMedia('img'))
                                     <img data-dz-thumbnail
-                                         src="{{ $value->getMedia('img')->first()->getFullUrl() }}"
+                                         src="{{ $value->getFirstMedia('img')->getFullUrl() }}"
                                          width="100px" class="img-thumbnail">
+                                    @endif
                                 </td>
                                 <td width="30%">
                                     {{ $value->name }}

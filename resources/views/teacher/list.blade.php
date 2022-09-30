@@ -14,7 +14,9 @@
                 <div class="teacher-img">
                     <img src="{{$teacher->getMedia('img')->first()->getFullUrl()}}" alt="" class="w-100" data-bs-toggle="modal" data-bs-target="#teacherModal-{{$teacher->id}}">
                 </div>
-                <p class="text-center fw-bold p-2">{{$teacher->name}}</p>
+                <div class="text-center fw-lighter py-4">
+                    <small>{{$teacher->name}}</small>
+                </div>
             </div>
             @endforeach
         </div>
@@ -35,7 +37,7 @@
                         <div class="row p-3">
                             <div class="col-sm-12 col-md-4 text-center">
                                 <img src="{{$teacher->getMedia('img')->first()->getFullUrl()}}" alt="" class="img-fluid px-5 p-md-0">
-                                <p class="py-3">{{$teacher->name}}</p>
+                                <p class="py-3"><small>{{$teacher->name}}</small></p>
                             </div>
                             <div class="col-sm-12 col-md-8">
                                 <div class="row lh-lg">

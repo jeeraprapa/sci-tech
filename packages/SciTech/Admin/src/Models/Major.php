@@ -20,6 +20,7 @@ class Major extends Model implements HasMedia
         'department_id',
         'name',
         'full_name',
+        'video_title',
         'video',
         'youtube_url',
         'detail',

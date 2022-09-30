@@ -7,6 +7,18 @@
     </div>
     <div class="col-6">
         <div class="form-group">
+            {{ Form::label('title', 'Title', array('class' => 'required')) }}
+            {{ Form::text('title', null, ['class' => 'form-control']) }}
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group">
+            {{ Form::label('sub_title', 'Sub Title', array('class' => 'required')) }}
+            {{ Form::text('sub_title', null, ['class' => 'form-control']) }}
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group">
             {{ Form::label('type', 'ระดับ', array('class' => 'required')) }}
             {{ Form::text('type', null, ['class' => 'form-control']) }}
         </div>
