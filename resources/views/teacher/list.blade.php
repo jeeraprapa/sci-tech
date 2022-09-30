@@ -25,7 +25,7 @@
     @foreach($department->teachers as $teacher)
         <!-- Modal -->
         <div class="modal fade modal-blog" id="teacherModal-{{$teacher->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-xl">
                 <div class="modal-content p-0">
                     <div class="modal-body">
                         <div class="text-header">
