@@ -174,77 +174,58 @@
             right: -7%
 
     #booth-item3
-        .booth-name
-            top: 100%
-            padding: 0 2rem
+        &.booth-wrapper
+            margin: 0 auto
+            display: flex
+            align-items: center
+            @include screen('xs')
+                width: calc(281px * 1.12)
+                height: calc(250px * 1.12)
             @include screen('md')
-                top: 20%
-                left: 0
-                right: 0
-                margin-left: auto
-                margin-right: auto
-                width: 100%
-        #thumbnail
-            position: absolute
-            top: 65%
-            left: 61%
-            @include screen('sm')
-                left: 45%
-            @include screen('md')
-                left: 64%
+                width: calc(281px * 2)
+                height: calc(250px * 2)
             @include screen('lg')
-                left: 64%
-            img
-                height: 30px
-                @include screen('sm')
-                    height: 55px
-                @include screen('md')
-                    height: 55px
-                @include screen('lg')
-                    height: 80px
+                width: calc(281px * 3)
+                height: calc(250px * 3)
+            @include screen('xwide')
+                width: calc(281px * 4)
+                height: calc(250px * 4)
+        .booth-detail
+            margin: 0 auto
+            width: 281px
+            height: 250px
+            transition: all 1s ease
+            @include screen('xs')
+                transform: scale(1.12)
+            @include screen('md')
+                transform: scale(2)
+            @include screen('lg')
+                transform: scale(3)
+            @include screen('xwide')
+                transform: scale(4)
+    
         #video
-            top: 38%
-            left: 42%
-            @include screen('md')
-                top: 38%
-                left: 43%
-            @include screen('lg')
-                top: 54%
-                left: 45%
+            img
+                height: 11px
+            top: 8%
+            left: 10%
         #course
-            top: 68%
-            left: 14%
-            @include screen('md')
-                top: 70%
-                left: 15%
-            @include screen('lg')
-                top: 70%
-                left: 17%
+            img
+                height: 11px
+            top: 30%
+            left: 81%
         #posters
-            top: 58%
-            right: 27%
-            @include screen('md')
-                top: 64%
-                right: 26%
-            @include screen('lg')
-                top: 65%
-                right: 28%
+            img
+                height: 11px
+            top: 30%
+            right: 82%
 
         #name
-            font-size: 0.6rem
-            top: 80%
-            right: 5%
-            @include screen('sm')
-                top: 80%
-                right: 5%
-            @include screen('md')
-                font-size: 1rem
-                top: 80%
-                right: 7%
-            @include screen('lg')
-                font-size: 1rem
-                top: 78%
-                right: 15%
+            img
+                height: 11px
+            top: 18%
+            right: -8%
+            
 
     #booth-item4
         .booth-name
