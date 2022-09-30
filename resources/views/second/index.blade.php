@@ -78,20 +78,32 @@
             <map name="area-map">
                 <area class="area-map" target="" alt="1"
                       data-name="แขนงวิชาวิทยาการคอมพิวเตอร์"
-                      data-type="ระดับปริญาตรี" href="{{route('booth.com-sci')}}"
+                      data-type="ระดับปริญาตรี"
+                      data-color="#ffcd2f"
+                      data-bg="{{asset('images/booth/Icon-Scitech-Booth1.png')}}"
+                      href="{{route('booth.com-sci')}}"
                       coords="184,522,366,422,366,383,391,365,415,378,449,363,457,312,525,295,601,353,601,393,776,493,786,519,739,553,572,670,530,749,276,614"
                       shape="poly">
                 <area class="area-map" target="" alt="2"
-                      data-name="แขนงวิชาเทคโนโลยีดิจิทัล" data-type="ระดับปริญาโท"
+                      data-name="แขนงวิชาเทคโนโลยีดิจิทัล"
+                      data-type="ระดับปริญาโท"
+                      data-color="#b1d34a"
+                      data-bg="{{asset('images/booth/Icon-Scitech-Booth4.png')}}"
                       href="{{route('booth.tech-digital')}}" coords="4728,398,778,365,779,322,876,280,898,300,924,281,929,217,949,207,976,222,986,183,995,132,1029,136,1181,176,1271,232,1376,285,1431,322,1424,370,1387,412,1276,436,1288,478,1178,553,1068,624,749,443"
                       shape="poly">
                 <area class="area-map" target="" alt="3"
                       data-name="แขนงวิชาเทคโนโลยีอุตสาหกรรม"
-                      data-type="ระดับปริญาตรี" href="{{route('booth.industrial-tech')}}"
+                      data-type="ระดับปริญาตรี"
+                      data-color="#6ECBF1"
+                      data-bg="{{asset('images/booth/Icon-Scitech-Booth3.png')}}"
+                      href="{{route('booth.industrial-tech')}}"
                       coords="494,783,486,816,712,939,791,995,832,995,1115,819,1027,741,810,598,664,634,596,687" shape="poly">
                 <area class="area-map" target="" alt="4"
                       data-name="แขนงวิชาเทคโนโลยการจัดการทางวิศวกรรม"
-                      data-type="ระดับปริญาโท" href="{{route('booth.engineer-management')}}"
+                      data-type="ระดับปริญาโท"
+                      data-color="#799FE6"
+                      data-bg="{{asset('images/booth/Icon-Scitech-Booth2.png')}}"
+                      href="{{route('booth.engineer-management')}}"
                       coords="1029,721,1254,870,1264,949,1763,697,1712,663,1627,700,1356,493,1181,582,1102,629" shape="poly">
             </map>
         </main>
@@ -103,9 +115,8 @@
                 <img src="{{asset('images/icon-blog.png')}}" alt="">
             </a>
         </div>
-        <div id="tooltip" style="">
+        <div id="tooltip">
             <span>
-                <img src='{{asset('images/pin.png')}}'>
                 <div></div>
             </span>
         </div>
@@ -144,7 +155,10 @@
             // populate tooltip string
             var name = $(this).data('name');
             var type = $(this).data('type');
-            name = "" + name + "<p>" + type + "</p>";
+            var bg = $(this).data('bg');
+            var color = $(this).data('color');
+
+            name = "" + name + "<p style='color: "+ color +"'>" + type + "</p>";
             $('#tooltip span div').html(name);
 
             // show tooltip
@@ -154,7 +168,9 @@
             $(this).mousemove(function () {
                 $('#tooltip').css({
                     'top': mouseY - 100,
-                    'left': mouseX - 100
+                    'left': mouseX - 100,
+                    'background-image': 'url('+bg+')',
+                    'background-size': '100% 100%'
                 });
             });
         }).mouseout(function () {
