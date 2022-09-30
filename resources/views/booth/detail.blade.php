@@ -39,7 +39,6 @@
                     </div>
 
                     <div class="text-detail">
-                        <h3 class="h3 pb-3">{{$major->name}}</h3>
                         {!! $major->detail !!}
                     </div>
                 </div>

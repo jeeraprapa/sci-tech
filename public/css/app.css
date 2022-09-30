@@ -1455,6 +1455,17 @@ body {
   max-width: 100%;
 }
 
+#modal-course a,
+#modal-name a,
+#modal-video a {
+  color: black;
+}
+#modal-course .table-bordered,
+#modal-name .table-bordered,
+#modal-video .table-bordered {
+  border-color: transparent;
+}
+
 #teacher header {
   background: #FFFFFF;
   border: 5px solid #FFFFFF;
