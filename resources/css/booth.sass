@@ -96,12 +96,16 @@
             height: 176px
             transition: all 1s ease
             @include screen('xs')
+                -webkit-transform: scale(1.12)
                 transform: scale(1.12)
             @include screen('md')
+                -webkit-transform: scale(2)
                 transform: scale(2)
             @include screen('lg')
+                -webkit-transform: scale(3)
                 transform: scale(3)
             @include screen('xwide')
+                -webkit-transform: scale(4)
                 transform: scale(4)
         #video
             img
@@ -147,12 +151,16 @@
             height: 250px
             transition: all 1s ease
             @include screen('xs')
+                -webkit-transform: scale(1.12)
                 transform: scale(1.12)
             @include screen('md')
+                -webkit-transform: scale(2)
                 transform: scale(2)
             @include screen('lg')
+                -webkit-transform: scale(3)
                 transform: scale(3)
             @include screen('xwide')
+                -webkit-transform: scale(4)
                 transform: scale(4)
         #video
             img
@@ -198,12 +206,16 @@
             height: 250px
             transition: all 1s ease
             @include screen('xs')
+                -webkit-transform: scale(1.12)
                 transform: scale(1.12)
             @include screen('md')
+                -webkit-transform: scale(2)
                 transform: scale(2)
             @include screen('lg')
+                -webkit-transform: scale(3)
                 transform: scale(3)
             @include screen('xwide')
+                -webkit-transform: scale(4)
                 transform: scale(4)
 
         #video
@@ -252,12 +264,16 @@
             height: 250px
             transition: all 1s ease
             @include screen('xs')
+                -webkit-transform: scale(1.12)
                 transform: scale(1.12)
             @include screen('md')
+                -webkit-transform: scale(2)
                 transform: scale(2)
             @include screen('lg')
+                -webkit-transform: scale(3)
                 transform: scale(3)
             @include screen('xwide')
+                -webkit-transform: scale(4)
                 transform: scale(4)
         #video
             img
@@ -329,334 +345,6 @@
             a:nth-child(2)
                 color: #fff
                 background: #80BF41
-    .booth1, .booth2, .booth3, .booth4
-        position: relative
-        .poster
-            position: absolute
-    .booth1
-        #poster1, #poster2
-            img
-                max-width: 49px
-                @include screen('md')
-                    max-width: 85px
-                @include screen('lg')
-                    max-width: 80px
-                @include screen('ipad')
-                    max-width: 65px
-                @include screen('xl')
-                    max-width: 71px
-                @include screen('wide')
-                    max-width: 90px
-                @include screen('mwide')
-                    max-width: 86px
-                @include screen('xwide')
-                    max-width: 92px
-        #poster1
-            left: 11%
-            top: 38%
-            @include screen('md')
-                left: 15%
-                top: 38%
-            @include screen('lg')
-                left: 15%
-                top: 38%
-            @include screen('ipad')
-                left: 11%
-                top: 38%
-            @include screen('xl')
-                left: 11%
-                top: 38%
-            @include screen('wide')
-                left: 12%
-                top: 38%
-            @include screen('mwide')
-                left: 14%
-                top: 38%
-            @include screen('xwide')
-                left: 21.4%
-                top: 38%
-
-        #poster2
-            left: 75%
-            top: 38%
-            @include screen('md')
-                left: 74%
-                top: 38%
-            @include screen('lg')
-                left: 74%
-                top: 38%
-            @include screen('ipad')
-                left: 76%
-                top: 38%
-            @include screen('xl')
-                left: 76%
-                top: 38%
-            @include screen('wide')
-                left: 75%
-                top: 38%
-            @include screen('mwide')
-                left: 74%
-                top: 38%
-            @include screen('xwide')
-                left: 69%
-                top: 38%
-
-    .booth2
-        #poster1
-            img
-                max-width: 25px
-                @include screen('md')
-                    max-width: 64px
-                @include screen('lg')
-                    max-width: 64px
-                @include screen('ipad')
-                    max-width: 43px
-                @include screen('xl')
-                    max-width: 43px
-                @include screen('wide')
-                    max-width: 57px
-                @include screen('mwide')
-                    max-width: 64px
-                @include screen('xwide')
-                    max-width: 64px
-        #poster2
-            img
-                max-width: 31px
-                @include screen('md')
-                    max-width: 74px
-                @include screen('lg')
-                    max-width: 74px
-                @include screen('ipad')
-                    max-width: 50px
-                @include screen('xl')
-                    max-width: 50px
-                @include screen('wide')
-                    max-width: 73px
-                @include screen('mwide')
-                    max-width: 74px
-                @include screen('xwide')
-                    max-width: 74px
-        #poster1
-            left: 24%
-            top: 49%
-            @include screen('md')
-                left: 23%
-                top: 49%
-            @include screen('lg')
-                left: 28%
-                top: 49%
-            @include screen('ipad')
-                left: 23%
-                top: 49%
-            @include screen('xl')
-                left: 23%
-                top: 49%
-            @include screen('wide')
-                left: 23%
-                top: 49%
-            @include screen('mwide')
-                left: 23%
-                top: 49%
-            @include screen('xwide')
-                left: 28%
-                top: 49%
-
-        #poster2
-            left: 68%
-            top: 44.6%
-            @include screen('md')
-                left: 69.4%
-                top: 44.6%
-            @include screen('lg')
-                left: 69.4%
-                top: 44.6%
-            @include screen('ipad')
-                left: 69%
-                top: 44.6%
-            @include screen('xl')
-                left: 69%
-                top: 44.6%
-            @include screen('wide')
-                left: 69%
-                top: 44.6%
-            @include screen('mwide')
-                left: 69.4%
-                top: 44.6%
-            @include screen('xwide')
-                left: 65.7%
-                top: 44.6%
-
-    .booth3
-        #poster1
-            img
-                max-width: 31px
-                @include screen('md')
-                    max-width: 64px
-                @include screen('lg')
-                    max-width: 38px
-                @include screen('ipad')
-                    max-width: 38px
-                @include screen('xl')
-                    max-width: 53px
-                @include screen('wide')
-                    max-width: 53px
-                @include screen('mwide')
-                    max-width: 62px
-                @include screen('xwide')
-                    max-width: 72px
-        #poster2
-            img
-                max-width: 27px
-                @include screen('md')
-                    max-width: 59px
-                @include screen('lg')
-                    max-width: 36px
-                @include screen('ipad')
-                    max-width: 36px
-                @include screen('xl')
-                    max-width: 55px
-                @include screen('wide')
-                    max-width: 55px
-                @include screen('mwide')
-                    max-width: 56px
-                @include screen('xwide')
-                    max-width: 71px
-
-        #poster1
-            left: 12%
-            top: 58%
-            @include screen('md')
-                left: 11%
-                top: 58%
-            @include screen('lg')
-                left: 12%
-                top: 58%
-            @include screen('ipad')
-                left: 12%
-                top: 58%
-            @include screen('xl')
-                left: 11.5%
-                top: 58%
-            @include screen('wide')
-                left: 11.5%
-                top: 58%
-            @include screen('mwide')
-                left: 11%
-                top: 58%
-            @include screen('xwide')
-                left: 11%
-                top: 58%
-
-        #poster2
-            left: 70%
-            top: 65%
-            @include screen('md')
-                left: 70%
-                top: 65%
-            @include screen('lg')
-                left: 70%
-                top: 66%
-            @include screen('ipad')
-                left: 70%
-                top: 66%
-            @include screen('xl')
-                left: 70%
-                top: 65%
-            @include screen('wide')
-                left: 70%
-                top: 65%
-            @include screen('mwide')
-                left: 70.5%
-                top: 65%
-            @include screen('xwide')
-                left: 70.5%
-                top: 65%
-
-    .booth4
-        #poster1
-            img
-                max-width: 64px
-                @include screen('md')
-                    max-width: 103px
-                @include screen('lg')
-                    max-width: 103px
-                @include screen('ipad')
-                    max-width: 81px
-                @include screen('xl')
-                    max-width: 81px
-                @include screen('wide')
-                    max-width: 94px
-                @include screen('mwide')
-                    max-width: 100px
-                @include screen('xwide')
-                    max-width: 100px
-        #poster2
-            img
-                max-width: 68px
-                @include screen('md')
-                    max-width: 105px
-                @include screen('lg')
-                    max-width: 105px
-                @include screen('ipad')
-                    max-width: 91px
-                @include screen('xl')
-                    max-width: 91px
-                @include screen('wide')
-                    max-width: 106px
-                @include screen('mwide')
-                    max-width: 107px
-                @include screen('xwide')
-                    max-width: 107px
-
-        #poster1
-            left: 13%
-            top: 49%
-            @include screen('md')
-                left: 20%
-                top: 48%
-            @include screen('lg')
-                left: 20%
-                top: 48%
-            @include screen('ipad')
-                left: 13%
-                top: 48%
-            @include screen('xl')
-                left: 13%
-                top: 48%
-            @include screen('wide')
-                left: 19%
-                top: 48%
-            @include screen('mwide')
-                left: 20%
-                top: 49%
-            @include screen('xwide')
-                left: 26%
-                top: 49%
-
-        #poster2
-            left: 51%
-            top: 40%
-            @include screen('md')
-                left: 51%
-                top: 39%
-            @include screen('lg')
-                left: 51%
-                top: 39%
-            @include screen('ipad')
-                left: 51%
-                top: 39%
-            @include screen('xl')
-                left: 51%
-                top: 39%
-            @include screen('wide')
-                left: 51%
-                top: 39%
-            @include screen('mwide')
-                left: 51%
-                top: 40%
-            @include screen('xwide')
-                left: 51%
-                top: 40%
 
 
 
