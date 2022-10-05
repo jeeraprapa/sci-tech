@@ -3,7 +3,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
 
             <a class="navbar-brand" href="{{route('index')}}">
-                <img src="{{asset('images/logo.png')}}" alt="" width="100%" height="60">
+                <img src="{{asset('images/logo.png')}}" alt="" height="60">
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup"

@@ -3,13 +3,14 @@
 namespace SciTech\Admin\Service;
 
 use File;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 class Editor
 {
     public function uploadImage($field)
     {
+        $field = str_replace('<?xml encoding="utf-8" ?>','',$field);
+
         $dom = new \DomDocument();
         $dom->loadHtml('<?xml encoding="utf-8" ?>' .$field, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
         $image_file = $dom->getElementsByTagName('img');
