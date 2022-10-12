@@ -70,7 +70,10 @@
             <div class="d-none d-lg-block position-relative" id="video-container">
                 <img src="{{asset('images/second.jpg')}}" alt="" class="img-fluid w-100 opacity-0 z-index-99" usemap="#area-map">
 
-                <video autoplay muted loop preload="auto" class="position-absolute w-100 top-0" poster="{{asset('images/preview.jpg')}}">
+                <video autoplay muted loop preload="auto" class="position-absolute w-100 top-0 d-xxl-none">
+                    <source src="{{asset('video/ipad.mp4')}}" type="video/mp4">
+                </video>
+                <video autoplay muted loop preload="auto" class="position-absolute w-100 top-0 d-none d-xxl-block">
                     <source src="{{asset('video/second-video.mp4')}}" type="video/mp4">
                 </video>
             </div>
