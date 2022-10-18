@@ -6,7 +6,7 @@
             @include('booth._header')
             <div class="row justify-content-center" id="booth-list">
                 @foreach($department->majors as $major)
-                    <div class="col-12 col-lg-5 {{$major->booth_id}} px-5 mb-5">
+                    <div class="col-12 {{$department->majors->count() == 1 ? 'col-lg-6' : 'col-lg-5' }} {{$major->booth_id}} px-5 mb-5">
                         <a href="{{route('booth.major',['department'=>$department->slug,'slug'=>$major->slug])}}">
                             @if($major->getFirstMedia('icon'))
                                 <img src="{{$major->getFirstMedia('icon')->getFullUrl()}}" alt="{{$department->name}} {{$major->name}}"
